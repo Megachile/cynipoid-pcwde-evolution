@@ -1,0 +1,13 @@
+pattern	class	reason
+tables/authority/table_s1_catalog/report_pins.tsv	display_config	Pinned corroborating report hashes document the catalog cells; raw reports remain in the run evidence because they contain private paths
+analysis/domain_preparation/*	frozen_member_layer	member full-length sequences, HMM domain tables and trimmed domains; reader-facing
+deposit/reader/gene_by_sample_tpm.tsv	frozen_member_layer	member expression matrix; reader-facing
+deposit/base/data/selection/*	frozen_member_layer	positive-selection results frozen to the 41-genome scope (257/300/354 CDS); reader-facing
+deposit/base/*/catalytic_domains/*	frozen_out_of_family	GH30_3 / PI-PLC-X accessory-domain sequences, alignments and trees (Figure S2); reader-facing
+deposit/base/trees/*	frozen_cached_tree	cached IQ-TREE inference and display trees (origin, complete locus, B-lectin); reader-facing
+deposit/base/sequences/*	frozen_member_layer	member and outgroup tree-input sequences; reader-facing
+deposit/base/alignments/*	frozen_member_layer	MAFFT alignments of member and outgroup sequences; reader-facing
+deposit/base/sidecars/*	frozen_member_layer	tip-label maps, B-lectin architecture/domain manifests, method notes and the CB-origin removal record; reader-facing
+INPUT_MANIFEST.tsv	static_build_input	deposit inventory, checked file by file by verify
+figures/INPUT_MANIFEST.tsv	static_build_input	figure-input inventory, checked by verify
+chromosome_gain/*	static_build_input	Pinned BK placement evidence and corrected eCAMI gene-object bridge consumed by the manuscript chromosome-gain target; verify checks every path, size and hash

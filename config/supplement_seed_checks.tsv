@@ -1,0 +1,8 @@
+item	section_id	anchor	value_source	label	fixed_note
+07	S-C	The final domain-trimmed analysis sets contained	numbers:origin_domain_totals.PL1_8,origin_domain_totals.PL4_4	Current PL1_8 and PL4_4 domain-trimmed totals
+10	S-E	A total of 84 flanking gene patterns could be matched across more than one genome	pending	Synteny update 448/675 awaits step B
+28	S-B	Tissue-specific larval RNA-seq (gut, salivary glands, head, cuticle, and malpighian tubules)	table_s6:tissues	Current Table S6 larval tissue roster
+28	S-B	adult venom and accessory glands of seven species	table_s6:adult_species	Current Table S6 adult venom/accessory species count
+36	S-C	Of 67 cynipoid B-lectin-family proteins identified	b_lectin:locus_tips	Current B-lectin locus-tree roster
+36	S-C	69 trimmed B-lectin domains were used for phylogenetic analysis	b_lectin:domain_records	Current B-lectin domain-tree roster
+38	S-B	adult venom and ovary tissue; Cambier et al.2019	table_s6:Biorhiza_pallida	Current Table S6 Biorhiza pallida tissues	Adam 2026-10-22/2026-11-02: the *B. pallida* adult venom/ovary 454 libraries are not used; removal from all products is a separate pending change.

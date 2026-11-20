@@ -1,0 +1,9 @@
+/build/
+/figshare_data/
+__pycache__/
+*.py[cod]
+*.log
+*.aux
+*.out
+*.synctex.gz
+.DS_Store

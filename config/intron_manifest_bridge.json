@@ -1,0 +1,92 @@
+{
+  "original_sha256": "5b87464aa3772751e424d05592b4fca82e189cae6e6caf3beed47f0ae1b46964",
+  "portable_sha256": "4d6bc3682c3b3f414781ff8c4114a5442d9fe3e7111a6bd69cafa87e64d74315",
+  "original_alias": "source_inputs/provenance/intron_snapshot_sources.tsv",
+  "rows": 38,
+  "changes": [
+    {
+      "row": 1,
+      "field": "gff_project_path",
+      "original_sha256": "cedd90d1ccf83107466a69f73f0697fce049008de5399bf2ea3ae68efdbcc62d",
+      "portable": "source_inputs/cazy/BK_mapping.gff"
+    },
+    {
+      "row": 3,
+      "field": "gff_project_path",
+      "original_sha256": "41c92cdc5b80ea13b9545a4bde23c3341c3c24c3175b0dce47cd283b4cc270ed",
+      "portable": "source_inputs/intron_composition_corrected/work/split_refreeze/DL/split30.gff3"
+    },
+    {
+      "row": 3,
+      "field": "proteome_project_path",
+      "original_sha256": "4557d6b7cde409d0fcda16ba36d531befeaf15b84b00604bb339ff3101ac7fad",
+      "portable": "source_inputs/intron_composition_corrected/work/split_refreeze/DL/proteins.faa"
+    },
+    {
+      "row": 16,
+      "field": "gff_project_path",
+      "original_sha256": "432de81a3b07a07b1543ee83a10b9822272ea51f6369ab7ac829fb0fc9a2cdd2",
+      "portable": "source_inputs/intron_composition_corrected/work/split_refreeze/AE/split30.gff3"
+    },
+    {
+      "row": 16,
+      "field": "proteome_project_path",
+      "original_sha256": "aea95d52935dce63f96c52de82ddef2b3d6b93e603a4c1cd35b0281d036e440e",
+      "portable": "source_inputs/intron_composition_corrected/work/split_refreeze/AE/proteins.faa"
+    },
+    {
+      "row": 17,
+      "field": "proteome_project_path",
+      "original_sha256": "a2670a1dee3b3e4875b0c4abbb3c6a42cd8da3892f2a09fecb69fa9a6ff03e22",
+      "portable": "source_inputs/cazy/AQP_proteins.faa"
+    },
+    {
+      "row": 25,
+      "field": "proteome_project_path",
+      "original_sha256": "7b1f2b43ebea498e4e0b85af0242c95e84e5eefe0f1d1000b8b07991413440cd",
+      "portable": "source_inputs/cazy/CQUE_proteins.faa"
+    },
+    {
+      "row": 26,
+      "field": "proteome_project_path",
+      "original_sha256": "d06157ba6fef4a9f3fdbe0cf4993d5a694a2a43147acaf7a10f831d229d30666",
+      "portable": "source_inputs/cazy/DRUB_proteins.faa"
+    },
+    {
+      "row": 27,
+      "field": "proteome_project_path",
+      "original_sha256": "6529b0d9db215eee8309bc8364ef3009857b4007c260bae56b485d47236e921a",
+      "portable": "source_inputs/cazy/PCAN_proteins.faa"
+    },
+    {
+      "row": 28,
+      "field": "proteome_project_path",
+      "original_sha256": "c081e836b6d602e57938d3d44231d00da3456da2f69ad85aacc47a68054b1648",
+      "portable": "source_inputs/cazy/SHIS_proteins.faa"
+    },
+    {
+      "row": 29,
+      "field": "proteome_project_path",
+      "original_sha256": "787145e103cf1ac66092f8158dd1aa8b35015c2ba37e54e570fd825c26ae601d",
+      "portable": "source_inputs/cazy/AMIN_proteins.faa"
+    },
+    {
+      "row": 30,
+      "field": "proteome_project_path",
+      "original_sha256": "0b2451d4e7d77ceda41cab1bac58015b0205d69a5ac283d0531176e6279d8ee6",
+      "portable": "source_inputs/cazy/AHIE_proteins.faa"
+    },
+    {
+      "row": 31,
+      "field": "proteome_project_path",
+      "original_sha256": "c2ff43e09b9b4558934379ccb46d8b546ebffb338bac3212d39f9f22046bac66",
+      "portable": "source_inputs/cazy/TPHE_proteins.faa"
+    },
+    {
+      "row": 33,
+      "field": "proteome_project_path",
+      "original_sha256": "d4134619d5ec48188434a7d2f42292aff4f6d99353d28adbb9cf593b4f248de9",
+      "portable": "source_inputs/cazy/PLAM_proteins.faa"
+    }
+  ]
+}

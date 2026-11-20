@@ -1,0 +1,141 @@
+{
+ "description": "Author-submitted supplement captions applied verbatim by stable ID (surrounding whitespace trimmed only). Later submissions supersede earlier ones per stable ID: tables 20:44 < 20:55 < 20:56 MST, figures 21:50 < 21:56 MST on 2026-11-13. Rendered through scripts/release/author_captions.py.",
+ "captions": {
+  "table:catalog": {
+   "label_at_submission": "Table S1",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_table_captions_20261113.json",
+   "submission_sha256": "f2c6b27e7c7afb163955d1204022b3fd15318f792c8a65ba2551bdb42874f0f3",
+   "caption": "Biological sources and sequence-resource quality. BUSCO completeness was assessed with hymenoptera_odb12, except for four dipteran references assessed with insecta_odb10."
+  },
+  "table:expression": {
+   "label_at_submission": "Table S2b",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_table_captions_20261113_2055.json",
+   "submission_sha256": "61e71ac8f32654959881a1f9e6d1c9ad4d9aa6446925896e500e90952fa3d482",
+   "caption": "Summarized expression of each target gene family in each tissue and species. Values are summed across family members within each sample, then summarized (median, IQR, range) across samples by sample type. Full per-sample and per-gene TPM values, metadata, and mapping QC are provided in the Figshare repository."
+  },
+  "table:outgroup": {
+   "label_at_submission": "Table S3",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_table_captions_20261113.json",
+   "submission_sha256": "f2c6b27e7c7afb163955d1204022b3fd15318f792c8a65ba2551bdb42874f0f3",
+   "caption": "Target gene counts, length, and occurrence across cynipoid genomes and outgroup categories."
+  },
+  "table:loci": {
+   "label_at_submission": "Table S4",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_table_captions_20261113.json",
+   "submission_sha256": "f2c6b27e7c7afb163955d1204022b3fd15318f792c8a65ba2551bdb42874f0f3",
+   "caption": "Chromosome placement of 676 accepted genome-derived target copies across 49 genomes. Named-chromosome counts use RagTag or JCVI to match scaffolds to the B. kinseyi reference chromosomes. Synteny blocks are summarized separately in Table S5."
+  },
+  "table:synteny": {
+   "label_at_submission": "Table S5",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_table_captions_20261113_2055.json",
+   "submission_sha256": "61e71ac8f32654959881a1f9e6d1c9ad4d9aa6446925896e500e90952fa3d482",
+   "caption": "Synteny block recovery summarized three ways. Part A summarizes the number of genes present, genes with sufficient flanking genes to define a potential synteny block, blocks which could be matched across two or more genomes. Part B reports characteristics of the modal reference-chromosome block per gene family (including two for the bimodal GH5_2): the reference chromosome on which it is found, the number of genomes in which it was and was not detected in total, with its target present, and with the target absent (empty). Part C summarizes the breadth at which synteny blocks defined in one genome could be recovered in other genomes, regardless of target gene presence. The full list of 201 synteny blocks, including flanking gene annotations for each locus in each genome, is in the Figshare repository."
+  },
+  "table:cazy_rank": {
+   "label_at_submission": "Table S6",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_table_captions_20261113.json",
+   "submission_sha256": "f2c6b27e7c7afb163955d1204022b3fd15318f792c8a65ba2551bdb42874f0f3",
+   "caption": "Gene-count ranks of three PCWDE families among native CAZyme groups (dbCAN-sub eCAMI clusters), per cynipoid lineage. Medians, percentiles and rank ranges include only genomes with the family present. Full per-genome and secondary-route ranks are in the Figshare repository."
+  },
+  "table:chromosome_gain_summary": {
+   "label_at_submission": "Table S7",
+   "base_sha": "6d7ae3d394e5bc313ab1ac45d7248766734ac348",
+   "source_submission": "CAPTION_REQUEST_LATEST.md",
+   "submission_sha256": "a6c8ba9730994008ac329ba5011978ea54ceb5d90ecb2da2a778fc9beab865e6",
+   "caption": "Inferred chromosome gains for target PCWDE families relative to 227 other CAZyme groups (dbCAN-sub eCAMI clusters). Part A lists inferred gains and losses under DELTRAN parsimony reconstruction for Cynipini and other lineages for horizontally acquired genes, and percentile ranks relative to all eCAMI clusters and relative to clusters with similar copy number counts. Part B shows the number and rate of inferred gains for clusters by copy number.",
+   "edit_source": "pcwde-final-s7-caption-repin-20261117"
+  },
+  "table:gc3": {
+   "label_at_submission": "Table S8",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_table_captions_20261113_2056.json",
+   "submission_sha256": "af21edfe676480f4961e80948e985952c131f795c6120b3a202511d800bf35b5",
+   "caption": "GC3 of transferred-gene copies against cynipoid gene background rates and nearest bacterial representatives. B-lectin comparisons were run on both the full multi-domain gene (chr6 full) and B-lectin only paralog (chr 3 reduced). Paired Wilcoxon tests, with species as the paired units, assess whether wasp copies and their bacterial comparators differ in their GC3 distance from the wasp genomic background.",
+   "edit_source": "pcwde-caption-approvals-20261115"
+  },
+  "table:intron": {
+   "label_at_submission": "Table S9",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_table_captions_20261113.json",
+   "submission_sha256": "f2c6b27e7c7afb163955d1204022b3fd15318f792c8a65ba2551bdb42874f0f3",
+   "caption": "Intron occurrence and conserved positions. Part A reports overall rates of intron occurrence by gene family. Part B reports statistics about conserved intron placements (present in 5 or more proteins), including position relative to the aligned amino acid sequence, number of occurrences, rate of occurrence across eligible genes, phase (0 between codons, 1 after the first base, 2 after the second), the cynipoid families in which it was found, and its placement on reference chromosomes.",
+   "edit_source": "pcwde-caption-approvals-20261115"
+  },
+  "table:selection_catalytic": {
+   "label_at_submission": "Table S10",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_table_captions_20261113.json",
+   "submission_sha256": "f2c6b27e7c7afb163955d1204022b3fd15318f792c8a65ba2551bdb42874f0f3",
+   "caption": "Selection and catalytic-residue conservation across three PCWDE families. FUBAR site classes use posterior probability > 0.9; aBSREL branch significance uses Holm-corrected P < 0.05."
+  },
+  "figure:tree_counts_full": {
+   "label_at_submission": "Figure S2",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_figure_captions_20261113_2150.json",
+   "submission_sha256": "002554aa5201e108e37c2509efafee9e93d30a380556f5f4f53dd43240f196ff",
+   "caption": "Presence and absence of five focal genes across a representative sample of outgroup Hymenoptera and Diptera and all retained cynipoid genomes. Paralog counts are shown for the three focal PCWDE families, the bacterially derived B-lectin family, and GH1_e72, a vertically inherited CAZyme. Tree modeled after Wiegmann et al. 2011 (Diptera), Blaimer et al. 2023 (Hymenoptera), and Hearn et al. 2024 (Cynipoidea)."
+  },
+  "figure:origin_trees_full": {
+   "label_at_submission": "Figure S3",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_figure_captions_20261113_2150.json",
+   "submission_sha256": "002554aa5201e108e37c2509efafee9e93d30a380556f5f4f53dd43240f196ff",
+   "caption": "Comprehensive PCWDE transfer context trees. Maximum-likelihood trees were inferred from cynipoid and outgroup sets using IQ-TREE on MAFFT alignments. Small representative subset of cynipoid sequences are shown. Node labels show percentages from 1,000 ultrafast bootstrap replicates and appear only where support is 70 or greater. Bars to the right show the length (line) and domain architecture (colored bars) of each protein, vertically aligned on the beginning of the catalytic domain. Bacteria are uncolored, eukaryotic lineages are coded in pastels. Panel A: GH5_2. Panel B: PL1_8. Panel C: PL4_4."
+  },
+  "figure:accessory_domain_trees": {
+   "label_at_submission": "Figure S4",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_figure_captions_20261113_2150.json",
+   "submission_sha256": "002554aa5201e108e37c2509efafee9e93d30a380556f5f4f53dd43240f196ff",
+   "caption": "GH30_3 and PI-PLC-X catalytic-domain phylogenies. Panel A shows the complete GH30_3 tree (204 domains: 16 cynipoid and 188 outgroup); panel B shows the complete PI-PLC-X tree (42 domains: seven cynipoid and 35 bacterial). Bars to the right show the length (line) and domain architecture (colored bars) of each protein. Panel A: GH30_3. Panel B: PI-PLC-X.",
+   "edit_source": "pcwde-caption-approvals-20261115"
+  },
+  "figure:complete_locus_trees": {
+   "label_at_submission": "Figure S5",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_figure_captions_20261113_2156.json",
+   "submission_sha256": "49f430f295cb12f2bb5fdb2585012e573398ff199e926c458dc686fc32b5cab7",
+   "caption": "Complete cynipoid PCWDE locus trees. Node labels show UFBOOT percentages at nodes with support of 70 or greater. After inference rooted on a bacterial outgroup, each cynipoid tree was rerooted on its largest exclusively Diplolepididae branch and ladderized. Right-hand annotations show species group, *Belonocnema kinseyi*-reference chromosome assignment where assignable, with T indicating a sequence was derived only from a transcriptome and U indicates it was on an unplaceable genomic scaffold. The tissue of greatest expression is shown in the rightmost column at the highest resolution available. A dot denotes a highest group mean below 100 TPM (no tissue listed), + denotes 100 to less than 1,000 TPM, and ++ denotes at least 1,000 TPM. L indicates larva, A indicates adult, and if no additional letter is present, no tissue-level data was collected for the peak life stage in that species. Second letters indicate the gene was most expressed in gut (G), Malpighian tubules (M), or salivary glands (S) in larvae and venom (V) in adults. Panel A: GH5_2. Panel B: PL1_8. Panel C: PL4_4.",
+   "edit_source": "pcwde-caption-approvals-20261115"
+  },
+  "figure:b_lectin_domain_tree": {
+   "label_at_submission": "Figure S6",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_figure_captions_20261113_2156.json",
+   "submission_sha256": "49f430f295cb12f2bb5fdb2585012e573398ff199e926c458dc686fc32b5cab7",
+   "caption": "B-lectin phylogeny with each domain placed independently. Affinity with the N-terminal and C-terminal *Actinoplanes awajinensis* sequences in this tree were used to assign the D1-like and D2-like partitions for the combined gene-level tree in Figure 5. Bars to the right show full protein length (line) and domain architecture (colored bars), vertically aligned on the selected B-lectin placed at the corresponding tip. Other B-lectin domains appearing in a protein are desaturated."
+  }
+ },
+ "not_applied": {
+  "table:expression_counts": {
+   "label_at_submission": "Table S2a",
+   "base_sha": "2838ce7389068349c218da42a6d2bbbda315e34b",
+   "source_submission": "author_table_captions_20261113.json",
+   "submission_sha256": "f2c6b27e7c7afb163955d1204022b3fd15318f792c8a65ba2551bdb42874f0f3",
+   "replacement": "Cells give counts of retained expression profiles by species and context; AG, accessory gland; VG, venom gland; Car, carcass; SG, salivary gland; MT, Malpighian tubule; Gall, whole larva.",
+   "disposition": "Not applied: replacement (base 2838ce7) defines a \"Gall\" column that the current candidate no longer has after the authorized regrouping of gall larvae into larval Whole; current candidate caption retained and listed for Adam"
+  },
+  "table:catalytic_clustering": {
+   "label_at_submission": "Table S11",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_table_captions_20261113_2055.json",
+   "submission_sha256": "61e71ac8f32654959881a1f9e6d1c9ad4d9aa6446925896e500e90952fa3d482",
+   "replacement": "asdfadsf",
+   "disposition": "Table S11 reader table retired; replacement is placeholder text (20:44 unfinished, 20:55 \"asdfadsf\"); kept as editorial history only"
+  },
+  "figure:chromosome_gain_distribution": {
+   "label_at_submission": "Figure S7",
+   "base_sha": "5800071d3e2250f0df8d7eb78b05d913349ddd0c",
+   "source_submission": "author_figure_captions_20261113_2150.json",
+   "submission_sha256": "002554aa5201e108e37c2509efafee9e93d30a380556f5f4f53dd43240f196ff",
+   "replacement": "drop",
+   "disposition": "Figure S7 retired by Adam (drop_figure_s7_20261113 amendment); \"drop\" is an instruction, not caption text"
+  }
+ }
+}

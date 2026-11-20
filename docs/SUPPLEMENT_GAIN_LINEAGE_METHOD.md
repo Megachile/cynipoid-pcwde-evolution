@@ -1,0 +1,5 @@
+# Retained-gain lineage split
+
+`scripts/analysis/chromosome_gain/ecami_score.py` scores each retained BK-chromosome gain on the pinned 48-tip species tree under DELTRAN, ACCTRAN and Sankoff, using the existing state matrix and parsimony parameters. Its existing Cynipini anchor is the clade containing `Dryocosmus_kuriphilus` and `Acraspis_erinacei`. A gain is assigned to Cynipini when all descendant tips of its gain branch lie in that clade; every other gain is assigned to other lineages. This is the same branch assignment used for the retired gain-tree display. For each family and mode the two counts must sum to total gains.
+
+The scorer writes `chromosome_gain/ecami_scores.tsv`, including per-mode lineage counts. `ecami_report.py` writes these into Part A of `chromosome_gain/report/Table_S15.tsv` and the focal summary; `build_numbers.py` reads the reader table for main-text lineage values and checks it against the focal summary. The built scorer and report receipts and the candidate build manifest record input and output SHA256. No states, tree, modes, thresholds or gain reconstruction are changed.

@@ -1,0 +1,6 @@
+R==4.5.3
+ape==5.8.1
+ggplot2==4.0.2
+ggtree==4.0.4
+patchwork==1.3.2
+treeio==1.34.0

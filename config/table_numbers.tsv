@@ -1,0 +1,11 @@
+table_id	label
+catalog	S1
+outgroup	S3
+loci	S4
+synteny	S5
+intron	S9
+expression	S2
+selection_catalytic	S10
+gc3	S8
+cazy_rank	S6
+chromosome_gain_summary	S7

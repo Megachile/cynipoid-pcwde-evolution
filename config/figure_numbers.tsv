@@ -1,0 +1,13 @@
+figure_id	source	path	label	manuscript_anchor
+tree_counts	build	tree_counts/tree_counts.pdf	1	image1
+origin_trees	build	origin_trees/origin_trees.pdf	2	image3
+introns	build	introns/introns.pdf	3	image5
+locus_trees	build	locus_trees/locus_trees.pdf	4	image6
+b_lectin_tree	build	b_lectin_tree/b_lectin_tree.pdf	5	image7
+expression	build	expression/expression.pdf	6	image8
+origin_trees_full	build	origin_trees/origin_trees_full.pdf	S3	
+accessory_domain_trees	build	accessory_domain_trees/accessory_domain_trees.pdf	S4	
+complete_locus_trees	build	complete_locus_trees/complete_locus_trees.pdf	S5	
+b_lectin_domain_tree	build	b_lectin_domain_tree/primary/figures/Figure_S4.pdf	S6	
+euceroptres_genome	static	build_inputs/euceroptres_genome/euceroptres_genome.pdf	S1	
+tree_counts_full	build	tree_counts/tree_counts_full.pdf	S2	

@@ -1,0 +1,41 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=0.65in]{geometry}
+\usepackage{fontspec}
+\setmainfont[
+  Path=/opt/spack/opt/spack/linux-sapphirerapids/texlive-20260301-lc7obxdnkjgeeyexv67oxbd3cc3eg6cf/texmf-dist/fonts/opentype/public/tex-gyre/,
+  Extension=.otf,
+  UprightFont=*-regular,
+  BoldFont=*-bold,
+  ItalicFont=*-italic,
+  BoldItalicFont=*-bolditalic
+]{texgyretermes}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage{pdfpages}
+\usepackage{eso-pic}
+\usepackage{ragged2e}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\pagestyle{plain}
+
+\newcommand{\firstfigpage}[3]{%
+  \clearpage
+  {\large\textbf{Figure \csname figlabel#1\endcsname.} #2\par}\medskip
+  \begin{center}
+  \includegraphics[page=#3,width=\textwidth,height=0.79\textheight,keepaspectratio]{\csname figpath#1\endcsname}
+  \end{center}
+}
+\newcommand{\continuedfigpage}[3]{%
+  \clearpage
+  {\textbf{Figure \csname figlabel#1\endcsname\ (continued).} #2\par}\medskip
+  \begin{center}
+  \includegraphics[page=#3,width=\textwidth,height=0.88\textheight,keepaspectratio]{\csname figpath#1\endcsname}
+  \end{center}
+}
+
+@@FIGURE_DEFINITIONS@@
+\begin{document}
+@@SECTIONED_BODY@@
+\end{document}

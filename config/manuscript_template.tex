@@ -1,0 +1,28 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{fontspec}
+\setmainfont{texgyretermes-regular.otf}[
+  BoldFont=texgyretermes-bold.otf,
+  ItalicFont=texgyretermes-italic.otf,
+  BoldItalicFont=texgyretermes-bolditalic.otf
+]
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{lineno}
+\usepackage{setspace}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\graphicspath{{figures/}}
+\captionsetup{font=small,labelformat=empty,justification=justified,singlelinecheck=false}
+\setlength{\parindent}{0.3in}
+\setlength{\parskip}{2pt}
+\setlength{\emergencystretch}{3em}
+\onehalfspacing
+\newsavebox{\figurelegendbox}
+\newlength{\figureavailableheight}
+\begin{document}
+@@BODY@@
+\end{document}

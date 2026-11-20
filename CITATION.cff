@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software or supporting data, please cite the associated manuscript."
+title: "PCWDE evolution in cynipoid wasps: analysis and rendering code"
+type: software
+version: 1.0.0
+authors:
+  - family-names: Kranz
+    given-names: Adam J.
+license: CC-BY-4.0
+identifiers:
+  - type: doi
+    value: 10.6084/m9.figshare.33265659
+    description: Reserved supporting-data DOI

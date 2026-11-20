@@ -1,0 +1,9 @@
+section_id	number	heading	items	author_slot
+S-A	S1	A chromosome-scale genome for *Euceroptres primus*	figure:euceroptres_genome	
+S-B	S2	Genome panel and transcriptome data	figure:tree_counts_full,table:catalog,table:expression	
+S-C0	S3	Gene family identification and outgroup context	table:outgroup	
+S-C	S4	Gene-tree construction	figure:origin_trees_full,figure:accessory_domain_trees,figure:complete_locus_trees,figure:b_lectin_domain_tree	
+S-E	S5	Chromosome homology and synteny blocks	table:loci,table:synteny	
+S-CN	S6	Relative change in copy number and retained chromosome gains	table:cazy_rank,table:chromosome_gain_summary	
+S-F	S7	Introns and GC3 composition of transferred genes	table:gc3,table:intron	
+S-G	S8	Catalytic site intactness and changes due to selection	table:selection_catalytic	

@@ -1,0 +1,205 @@
+section	numeral	context	class	check_key	source_note
+S-A	18	ion, sheared to \~18 kb, and pre	protocol		
+S-A	three	a pool of three females	protocol		
+S-A	2022	rFilt (Sim et al. 2022), assembled	citation		
+S-A	2021	ASM (Cheng et al. 2021; Cheng et a	citation		
+S-A	2022	021; Cheng et al. 2022\) using the	citation		
+S-A	2005	f (Vitkova et al. 2005), purged of	citation		
+S-A	2020	Dups (Guan et al. 2020), and scaff	citation		
+S-A	2019	Vasimuddin et al. 2019), Picard (B	citation		
+S-A	2019	(Broad Institute 2019), and YaHS	citation		
+S-A	2023	YaHS (Zhou et al. 2023), with manu	citation		
+S-A	2016	ox (Durand et al. 2016). Contig co	citation		
+S-A	2018	with Minimap2 (Li 2018), completen	citation		
+S-A	2025	Tegenfeldt et al. 2025\) using hym	citation		
+S-A	2009	+ (Camacho et al. 2009), Diamond (	citation		
+S-A	2021	(Buchfink et al. 2021), and FCS-G	citation		
+S-A	2024	(Astashyn et al. 2024), summarize	citation		
+S-A	2020	2 (Challis et al. 2020\) and blobb	citation		
+S-A	2014	ic (Bolger et al. 2014\) and expre	citation		
+S-A	2017	mon (Patro et al. 2017). Genome an	citation		
+S-A	2024	3 (Gabriel et al. 2024\) with Repe	citation		
+S-A	2010	(Quinlan and Hall 2010\) and Pfam	citation		
+S-A	2011	d via HMMER (Eddy 2011; Mistry et	citation		
+S-A	2021	11; Mistry et al. 2021).	citation		
+S-A	one	From one Revio cell	protocol		
+S-A	one	represented one third of the sequencing run	protocol		
+S-A	30	re obtained, of which 30 (0.0011% of reads) were 	author_report		
+S-A	0.0011	btained, of which 30 (0.0011% of reads) were discarde	author_report		
+S-A	44.6	rage was estimated at 44.6× coverage as reported by	author_report		
+S-A	14,633	gous. EGAPx annotated 14,633 genes, including {{suppl	author_report		
+S-A	1,737	and 1,737 lncRNA.	author_report		
+S-B	2025	m NCBI in October 2025\. Additiona	citation		
+S-B	2012	(Bankevich et al. 2012). Finally,	citation		
+S-B	2026	from NCBI in July 2026\. Of these,	citation		
+S-B	2021	yi* (Zhang et al. 2021). In order	citation		
+S-B	2021	; Stiehler et al. 2021\) was used	citation		
+S-B	2024	usfoliatus* (fall 2024, Houston, T	citation		
+S-B	2025	B. kinseyi* (fall 2025, Houston, T	citation		
+S-B	1	dissected out in 1x PBS using	protocol		
+S-B	2024	collected in fall 2024-winter 2025	date		
+S-B	2025	fall 2024-winter 2025\. Tissue-sp	date		
+S-B	2025	collected in fall 2025 from asexua	date		
+S-B	2026	sa* and in winter 2026 from sexual	date		
+S-B	2022	Martinson et al. 2022 and are presented	citation		
+S-B	2019	lls, Hearn et al. 2019), *Neuroterus	citation		
+S-B	2024	s, Bellows et al. 2024).	citation		
+S-B	2014	v39.37; Bushnell 2014), using min	citation		
+S-B	0.56	), using minratio=0.56, minhits=1,	parameter		
+S-B	1	tio=0.56, minhits=1, and ambigu	parameter		
+S-B	2011	(Grabherr et al. 2011\) for speci	citation		
+S-B	2013	EviGene (Gilbert 2013\) to reduce	citation		
+S-B	2013	oder (Haas et al. 2013\) to predic	citation		
+S-B	2017	0.3 (Patro et al. 2017). Expressio	citation		
+S-B	two	ad-sorting identified two larval samples with pred	author_report		
+S-B	Three	Three kinds of cynipid larvae	descriptive		
+S-C0	2012	db-V10; Yin et al 2012\) at the su	citation		
+S-C0	2023	.2.4; Zheng et al 2023\) using HMM	citation		
+S-C0	10	earch (E-value \< 10^-10) to ass	parameter		
+S-C0	2009	(Cantarel et al. 2009). Subfamily	citation		
+S-C0	2025	hanmugam and Yin, 2025). Structure	citation		
+S-C0	2021	el (Jumper et al. 2021; Mirdita et	citation		
+S-C0	2022	1; Mirdita et al. 2022), one model	citation		
+S-C0	one	one model per sequence	parameter		
+S-C0	three	three recycles	parameter		
+S-C0	1	ptm \--num-models 1 \--num-recy	parameter		
+S-C0	3	1 \--num-recycle 3 \--rank pld	parameter		
+S-C0	2017	egger and Söding, 2017). Signal pe	citation		
+S-C0	2022	nt (Teufel et al. 2022). Full CAZy	citation		
+S-C0	2021	se (Mistry et al. 2021\) at condit	citation		
+S-C0	1	conditional E-value \<1e-3.	parameter		
+S-C0	3	conditional E-value \<1e-3.	parameter		
+S-C0	1	16.0+ (E-value \< 1e-5, SEG fil	parameter		
+S-C0	5	0+ (E-value \< 1e-5, SEG filter	parameter		
+S-C0	200	ring enabled, max 200 targets; Ca	parameter		
+S-C0	2009	s; Camacho et al. 2009\) query aga	citation		
+S-C0	150	omain by at least 150, 150, and 2	parameter		
+S-C0	250	ast 150, 150, and 250 amino acids	parameter		
+S-C0	45	to have at least 45% amino-acid	parameter		
+S-C0	90	lign for at least 90 amino acids	parameter		
+S-C0	120	score of at least 120, and have a	parameter		
+S-C0	40	and have at least 40% identity.	parameter		
+S-C0	45	ts fell below the 45% identity t	parameter		
+S-C0	two	alignment of two cynipid PL1\_8 proteins (*Aulacidea tavakolii* and *Ceroptres masudai*)	descriptive		
+S-C0	three	identified using three methods	descriptive		
+S-C0	2021	(Buchfink et al. 2021\) queries a	citation		
+S-C0	10	tabase (E value \<10^-10, query	parameter		
+S-C0	50	query coverage \>50%, up to 100	parameter		
+S-C0	1000	rage \>50%, up to 1000 hits per qu	parameter		
+S-C	10	issive E-value (\<10^-5) and tri	parameter		
+S-C	5	ve E-value (\<10^-5) and trimme	parameter		
+S-C	50	arget domain plus 50 flanking am	parameter		
+S-C	30	its covering over 30% of the HMM	parameter		
+S-C	one	overlapped on one protein	protocol		
+S-C	2	lated ORF, were \>2x the family	parameter		
+S-C	50	domain covered \<50% of the pro	parameter		
+S-C	one	contained at least one intact B-lectin domain	protocol		
+S-C	one	more than one copy of the domain	descriptive		
+S-C	two	conducted in two stages	protocol		
+S-C	two	these two branches	descriptive		
+S-C	2017	anamoorthy et al. 2017\) selected	citation		
+S-C	1,000	was assessed with 1,000 UFBoot2 rep	parameter		
+S-C	1000	tes with BNNI (-B 1000 \-bnni; Hoa	parameter		
+S-C	2018	nni; Hoang et al. 2018\) and 1,000	citation		
+S-C	1,000	et al. 2018\) and 1,000 SH-aLRT rep	parameter		
+S-C	1000	replicates (-alrt 1000; Guindon et	parameter		
+S-C	2010	0; Guindon et al. 2010).	citation		
+S-C	Two	Two sets of gene trees	descriptive		
+S-C	2013	atoh and Standley 2013). Maximum-l	citation		
+S-C	2026	.0.1 (Wong et al. 2026\) under a f	citation		
+S-C	1,000	as estimated with 1,000 UFBoot2 rep	parameter		
+S-C	1000	t2 replicates (-B 1000; Hoang et a	parameter		
+S-C	2018	000; Hoang et al. 2018). Cynipoid	citation		
+S-E	10	le genomes to the 10 chromosome-	protocol		
+S-E	2022	reference (Alonge 2022). For *Euce	citation		
+S-E	2024	ions (Tang et al. 2024). Because r	citation		
+S-E	1	es to chromosomes 1-10 refer to	protocol		
+S-E	10	to chromosomes 1-10 refer to ge	parameter		
+S-E	10	ocks based on the 10 *B. kinseyi	protocol		
+S-E	2020	nts (Flynn et al. 2020). This libr	citation		
+S-E	30	or which at least 30% of CDS bas	parameter		
+S-E	2021	; Buchfink et al. 2021), 32 search	citation		
+S-E	32	ink et al. 2021), 32 search and	parameter		
+S-E	32	lysis threads (-t 32 \-a 32), an	parameter		
+S-E	1.5	and MCL inflation 1.5 (van Dongen	parameter		
+S-E	2000	n 1.5 (van Dongen 2000). After mer	citation		
+S-E	15	ins with at least 15% repeat ove	parameter		
+S-E	five	five or fewer genomes	parameter		
+S-E	three	at least three members	parameter		
+S-E	2013	atoh and Standley 2013), trimmed w	citation		
+S-E	2009	-Gutiérrez et al. 2009), and conve	citation		
+S-E	3.4	e HMMs with HMMER 3.4 hmmbuild (E	version		
+S-E	2011	.4 hmmbuild (Eddy 2011), yielding	citation		
+S-E	1	s library at E \< 1 × 10⁻⁵ and	parameter		
+S-E	10	brary at E \< 1 × 10⁻⁵ and assig	parameter		
+S-E	5	nes at windows of 5, 15, and 50	parameter	const:scripts/analysis/synteny/01_build_synteny.py:WINDOWS.0.1	
+S-E	15	at windows of 5, 15, and 50 on	parameter	const:scripts/analysis/synteny/01_build_synteny.py:WINDOWS.1.1	
+S-E	50	ows of 5, 15, and 50 on either s	parameter	const:scripts/analysis/synteny/01_build_synteny.py:WINDOWS.2.1	
+S-E	two	between two loci	descriptive		
+S-E	0.15	irs with Jaccard ≥0.15 at any wind	parameter	const:scripts/analysis/synteny/01_build_synteny.py:JACCARD_THRESHOLD	
+S-E	5	e narrow-window (±5 genes) Jacc	parameter	const:scripts/analysis/synteny/01_build_synteny.py:WINDOWS.0.1	
+S-E	1	distance matrix (1 − J), cutti	parameter		
+S-E	0.85	ogram at distance 0.85 (correspond	parameter		
+S-E	0.15	esponding to J \= 0.15). Because t	parameter	const:scripts/analysis/synteny/01_build_synteny.py:JACCARD_THRESHOLD	
+S-E	5	igh (detected at ±5 genes), med	parameter	const:scripts/analysis/synteny/01_build_synteny.py:WINDOWS.0.1	
+S-E	15	genes), medium (±15 genes only)	parameter	const:scripts/analysis/synteny/01_build_synteny.py:WINDOWS.1.1	
+S-E	50	s only), or low (±50 genes only)	parameter	const:scripts/analysis/synteny/01_build_synteny.py:WINDOWS.2.1	
+S-E	50	sent in more than 50% of block m	parameter	const:scripts/analysis/synteny/03_detect_empty_loci.py:CONSERVED_FREQ	
+S-E	500	clustered within 500 kb. After a	parameter		
+S-E	3	TY. If fewer than 3 conserved f	parameter	const:scripts/analysis/synteny/03_detect_empty_loci.py:MIN_FLANKING_CYNOGS	
+S-E	one	more than one genome	protocol		
+S-E	two	in two or more genomes	parameter		
+S-E	10	ock on chromosome 10 was recover	protocol		
+S-E	one	contained at least one GH5\_2 gene	protocol		
+S-E	6	\_2 block on chromosome 6 was recover	protocol		
+S-E	8	ock on chromosome 8 was recover	protocol		
+S-E	7	ock on chromosome 7 was recover	protocol		
+S-E	6	tin block on chromosome 6 was recover	protocol		
+S-F	10	OSUM62, gap open −10, gap extend	parameter		
+S-F	0.5	−10, gap extend −0.5, global mod	parameter		
+S-F	2009	mode; Cock et al. 2009). Each intr	citation		
+S-F	three	maximum distance of three amino acids	parameter		
+S-G	1	erans* Cel5A (PDB 1A3H, chain A	citation		
+S-G	1998	le (Davies et al. 1998). The conse	citation		
+S-G	1	ctin lyase B (PDB 1QCX, chain A	citation		
+S-G	1998	A; Vitali et al. 1998), correspon	citation		
+S-G	2003	hez-Torres et al. 2003). PL4\_4 po	citation		
+S-G	1	uronan lyase (PDB 1NKG, chain A	citation		
+S-G	2004	McDonough et al. 2004), which are	citation		
+S-G	2010	ly (Jensen et al. 2010). Reference	citation		
+S-G	1	(--auto \--thread 1). Each mapp	parameter		
+S-G	8	(--auto \--thread 8), and codin	parameter		
+S-G	50	gaps in more than 50% of sequenc	parameter		
+S-G	1,000	under GTR+G4 with 1,000 ultrafast b	parameter		
+S-G	1000	ap replicates (-B 1000 \-T 16 \--s	parameter		
+S-G	16	ates (-B 1000 \-T 16 \--safe; Ho	parameter		
+S-G	2018	afe; Hoang et al. 2018).	citation		
+S-G	2015	REL (Smith et al. 2015\) in HyPhy	citation		
+S-G	2020	ovsky Pond et al. 2020\) with \--b	citation		
+S-G	1	mega greater than 1, and signif	parameter		
+S-G	0.05	lm-corrected p \< 0.05 threshold.	parameter		
+S-G	2013	R (Murrell et al. 2013\) was run i	citation		
+S-G	0.9	or probability \> 0.9; all other	parameter	const:scripts/analysis/selection/03_parse_selection.py:PP	
+S-A	2026	Zhang et al (2026). Samples	citation		
+S-A	2025	Pennsylvania, collected in 2025\.	date		
+S-B	2025	protein set (Tegenfeldt et al. 2025). Since only	citation		
+S-B	2025	(September 2025, Brainerd, MN)	date		
+S-B	2023	egg (Guiguet et al. 2023). Venom	citation		
+S-B	2014	RNA reads were trimmed with Trimmomatic (Bolger et al. 2014\) and sorted	citation		
+S-C	4	(Figure S5; Figure 4 panels are pruned	protocol		
+S-E	Two	Two methods were used to determine	descriptive		
+S-E	10	which was assembled to 10 chromosomes (Liu et al. 2024)	citation		
+S-E	2024	10 chromosomes (Liu et al. 2024), JCVI	citation		
+S-E	2013	(Smit et al. 2013-2015)	citation		
+S-E	2015	(Smit et al. 2013-2015)	citation		
+S-CN	2020	sequence similarity (Xu et al. 2020). The largest	citation		
+S-CN	1971	(DELTRAN; Fitch 1971\) and counted	citation		
+S-CN	five	crown in at least five genomes	parameter		
+S-F	two	median. The two values were compared	descriptive		
+S-B	three	Since only three of the genomes (*B. kinseyi*, *Leptopilina boulardi* and *L. heterotoma*) were previously annotated, Helixer v0.3.6 (model invertebrate\_v0.3\_m\_0100; Stiehler et al. 2021\) was used to predict genomic elements.	author_assertion		literature / genome-source records
+S-C0	one	We found only one case for which a gene family was represented in a genome only by a pseudogene. *Parnips nigripes* contains a PL1\_8-like region whose tblastn hits fell below the 45% identity threshold, which was characterized separately by protein-to-genome alignment of two cynipid PL1\_8 proteins (*Aulacidea tavakolii* and *Ceroptres masudai*) with miniprot v0.9 and exonerate v2.4.0 (protein2genome), followed by a dbCAN-sub hmmsearch of the translated alignment.	author_assertion		mbe-rev-remnant-checks remnant-checks run
+S-C0	one	However, only one outgroup sequence contained the full intact domain architecture including PI-PLC-X, GH30\_3, and tandem B-lectin: bacterial species *Actinoplanes awajinensis*.	author_assertion		author tree interpretation; Figure S4 uniform Pfam-A architecture consistency check COORDINATOR_r69_S4_CHECK.md
+S-C0	two	These include a lineage of Nematodes possessing bacterial GH5\_2, two distinct bee acquisitions (Figure S3), one midge acquisition, and one oomycete acquisition of PL1\_8, and acquisitions of PL4\_4 by weevils, *Aspergillus* molds, and the parasitic plant *Cuscuta*.	author_assertion		author tree interpretation of Figure S3
+S-C0	one	These include a lineage of Nematodes possessing bacterial GH5\_2, two distinct bee acquisitions (Figure S3), one midge acquisition, and one oomycete acquisition of PL1\_8, and acquisitions of PL4\_4 by weevils, *Aspergillus* molds, and the parasitic plant *Cuscuta*.	author_assertion		author tree interpretation of Figure S3
+S-F	one	spanned more than one scaffold or strand	protocol		Current author export; coherent-CDS filter in observation producer
+S-G	Two	Two sister PL4\_4 sequences	descriptive		Named pair in current author export

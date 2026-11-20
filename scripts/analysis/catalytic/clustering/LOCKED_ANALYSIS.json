@@ -1,0 +1,183 @@
+{
+  "accepted_call_source": "repository_inputs/tables/authority/catalytic_current/catalytic_site_conservation_by_sequence.tsv (locked current-origin subset)",
+  "tree_source": "repository_inputs/deposit/base/trees/origin context full trees (accepted 2026-10-14 topology)",
+  "permutation_count": 10000,
+  "families": {
+    "GH5_2": {
+      "tree_tips": 427,
+      "mapped_accepted_proteins": 261,
+      "accepted_proteins_absent_tree": [],
+      "sites": {
+        "acid_base": {
+          "published_retained": 246,
+          "published_total": 249,
+          "mapped_retained": 246,
+          "mapped_total": 249,
+          "absent_observed": [],
+          "exceptions": 3,
+          "observed_changes": 3,
+          "permutations": 10000,
+          "seed": 20262262,
+          "null_mean": 2.9915,
+          "p_clustered": 1.0,
+          "null_histogram": {
+            "2": 85,
+            "3": 9915
+          }
+        },
+        "nucleophile": {
+          "published_retained": 233,
+          "published_total": 237,
+          "mapped_retained": 233,
+          "mapped_total": 237,
+          "absent_observed": [],
+          "exceptions": 4,
+          "observed_changes": 4,
+          "permutations": 10000,
+          "seed": 20262531,
+          "null_mean": 3.9845,
+          "p_clustered": 1.0,
+          "null_histogram": {
+            "3": 155,
+            "4": 9845
+          }
+        }
+      },
+      "any_exception": {
+        "population": 256,
+        "exceptions": 7,
+        "observed_changes": 7,
+        "mask_strata": {
+          "11": 230,
+          "10": 19,
+          "01": 7
+        },
+        "permutations": 10000,
+        "seed": 20261355,
+        "null_mean": 6.9558,
+        "p_clustered": 1.0,
+        "null_histogram": {
+          "5": 8,
+          "6": 426,
+          "7": 9566
+        }
+      }
+    },
+    "PL1_8": {
+      "tree_tips": 365,
+      "mapped_accepted_proteins": 301,
+      "accepted_proteins_absent_tree": [],
+      "sites": {
+        "catalytic_arginine": {
+          "published_retained": 284,
+          "published_total": 284,
+          "mapped_retained": 284,
+          "mapped_total": 284,
+          "absent_observed": [],
+          "exceptions": 0,
+          "observed_changes": 0,
+          "permutations": 0,
+          "seed": 20263268,
+          "null_mean": null,
+          "p_clustered": null,
+          "null_histogram": {}
+        }
+      },
+      "any_exception": {
+        "population": 284,
+        "exceptions": 0,
+        "observed_changes": 0,
+        "mask_strata": {
+          "1": 284
+        },
+        "permutations": 0,
+        "seed": 20261370,
+        "null_mean": null,
+        "p_clustered": null,
+        "null_histogram": {}
+      }
+    },
+    "PL4_4": {
+      "tree_tips": 446,
+      "mapped_accepted_proteins": 365,
+      "accepted_proteins_absent_tree": [],
+      "sites": {
+        "proton_abstractor": {
+          "published_retained": 267,
+          "published_total": 276,
+          "mapped_retained": 267,
+          "mapped_total": 276,
+          "absent_observed": [],
+          "exceptions": 9,
+          "observed_changes": 9,
+          "permutations": 10000,
+          "seed": 20263215,
+          "null_mean": 8.9153,
+          "p_clustered": 1.0,
+          "null_histogram": {
+            "7": 31,
+            "8": 785,
+            "9": 9184
+          }
+        },
+        "proton_donor": {
+          "published_retained": 260,
+          "published_total": 268,
+          "mapped_retained": 260,
+          "mapped_total": 268,
+          "absent_observed": [],
+          "exceptions": 8,
+          "observed_changes": 7,
+          "permutations": 10000,
+          "seed": 20262684,
+          "null_mean": 7.938,
+          "p_clustered": 0.05979402059794021,
+          "null_histogram": {
+            "6": 23,
+            "7": 574,
+            "8": 9403
+          }
+        }
+      },
+      "any_exception": {
+        "population": 292,
+        "exceptions": 13,
+        "observed_changes": 12,
+        "mask_strata": {
+          "10": 24,
+          "11": 252,
+          "01": 16
+        },
+        "permutations": 10000,
+        "seed": 20261369,
+        "null_mean": 12.8203,
+        "p_clustered": 0.16548345165483452,
+        "null_histogram": {
+          "9": 1,
+          "10": 4,
+          "11": 132,
+          "12": 1517,
+          "13": 8346
+        }
+      }
+    }
+  },
+  "coverage_reason_counts": {
+    "GH5_2/mapped_missing_site": 107,
+    "GH5_2/mapped_observed": 1401,
+    "GH5_2/tree_tip_without_accepted_call": 166,
+    "PL1_8/mapped_missing_site": 156,
+    "PL1_8/mapped_observed": 2454,
+    "PL1_8/tree_tip_without_accepted_call": 64,
+    "PL4_4/mapped_missing_site": 543,
+    "PL4_4/mapped_observed": 1553,
+    "PL4_4/tree_tip_without_accepted_call": 81
+  },
+  "sequence_unit_audit": {
+    "source": "SEQUENCE_UNIT_AUDIT.tsv",
+    "exceptions": 20,
+    "full_protein_identical": 13,
+    "contiguous_subsequence": 7,
+    "unresolved": 0
+  }
+}

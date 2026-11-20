@@ -1,0 +1,5 @@
+# Condensed synteny table
+
+`scripts/tables/build_tables_s3_s4.py` reads the pinned corrected 201-block summary, 9,849 block-by-genome states, 675 accepted loci, final 49-genome roster and the same built copy table used elsewhere. The accepted inputs and their SHA256s are enforced in the producer. Part A retains family coverage, and Part B retains modal block recovery. Part C now counts, per family, blocks recovered in exactly one genome, 2–24 genomes, and at least 25 genomes, plus blocks with an accepted target in one or more genomes. Each of the 201 blocks contributes to exactly one breadth bin. No block detection rule is changed.
+
+The full block list is written as `data/synteny/block_summary.tsv` in the data deposit. Each row keeps the stable block and reference-locus identifiers for lookup and adds a readable reference-locus description: current species display name plus its *B. kinseyi* reference chromosome, or “BK chromosome undetermined” when that placement is absent. The current names *Eschatocerus acaciae* and *Eubothrus centaureae* replace historical labels only in the description. The reader table contains no per-block reference-locus identifiers.

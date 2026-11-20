@@ -1,0 +1,54 @@
+kind	deposit_path	source	reason
+generated	ARCHIVE.sha256	scripts/release/build_data_deposit.py	archive checksum sidecar
+generated	DEPOSIT_SIZE.json	scripts/release/check_deposit_size.py	current-build deposit size check
+generated	pcwde_supporting_data.tar.gz	scripts/release/build_data_deposit.py	reader archive of the package
+generated	pcwde_supporting_data/README.md	scripts/release/build_data_deposit.py	reader README
+generated	pcwde_supporting_data/MANIFEST.tsv	scripts/release/build_data_deposit.py	package manifest
+generated	pcwde_supporting_data/SHA256SUMS.txt	scripts/release/build_data_deposit.py	package checksums
+generated	pcwde_supporting_data/DATA_DICTIONARY.tsv	scripts/release/build_data_deposit.py	data dictionary
+generated	pcwde_supporting_data/PUBLIC_PROJECTION.tsv	scripts/release/build_data_deposit.py	record of the public-input projection
+generated	pcwde_supporting_data/PROJECTED_INPUTS.tsv	scripts/release/build_data_deposit.py	current public-input projection inventory
+generated	pcwde_supporting_data/FIGSHARE_METADATA.md	scripts/release/build_data_deposit.py	Figshare metadata text
+generated	pcwde_supporting_data/data/source_panel.tsv	scripts/release/build_data_deposit.py	complete same-build table_s2/candidate/data/source_panel.tsv with public metadata projection
+generated	pcwde_supporting_data/data/family_membership.tsv	scripts/release/build_data_deposit.py	written from this build's Table S2 producer output (table_s2/candidate/data/family_membership.tsv; gene-copy unit; family label B-lectin)
+generated	pcwde_supporting_data/data/accepted_copy_counts.tsv	scripts/release/build_data_deposit.py	full 49-genome copy inventory from the Table S3 domain producer
+generated	pcwde_supporting_data/data/domain_summary.tsv	scripts/release/build_data_deposit.py	shared domain, occurrence and outgroup-screen summary from the Table S3 producer
+generated	pcwde_supporting_data/data/chromosome_placement_evidence.tsv	scripts/release/build_data_deposit.py	written from this build's Table S3/S4 producer output (tables_s3_s4/candidate/data/chromosome_placement_evidence.tsv; 676 gene copies; column placement_route)
+generated	pcwde_supporting_data/data/selection/selection_alignment_qc.tsv	scripts/release/build_data_deposit.py	reader selection QC rewritten from deposit/base/data/selection/selection_alignment_qc.tsv (hash columns dropped, count column renamed)
+copy	pcwde_supporting_data/repository_inputs/{rest}	{rest}	public executable inputs copied verbatim
+generated	pcwde_supporting_data/data/synteny/conserved_synteny_blocks.xlsx	scripts/release/build_data_deposit.py	corrected 201-block synteny workbook with 77 cross-genome detail sheets
+generated	pcwde_supporting_data/data/synteny/block_summary.tsv	scripts/release/build_data_deposit.py	full 201-block list with readable species and BK chromosome reference-locus descriptions
+generated	pcwde_supporting_data/data/expression/gene_by_sample_tpm.tsv	scripts/release/build_data_deposit.py	same-build Table S6 retained-sample projection of reader expression matrix
+generated	pcwde_supporting_data/data/introns/{rest}	scripts/release/build_data_deposit.py	built intron observations, Table S5 and GC3 comparisons
+generated	pcwde_supporting_data/data/selection/selection_membership_and_public_source.tsv	scripts/release/build_data_deposit.py	current Table S7 producer membership with public source accessions
+generated	pcwde_supporting_data/data/selection/catalytic_reader_table.tsv	scripts/release/build_data_deposit.py	current catalytic reader table from this build's origin-domain membership
+generated	pcwde_supporting_data/data/selection/catalytic_residue_summary.tsv	scripts/release/build_data_deposit.py	current catalytic site counts from this build's origin-domain membership
+generated	pcwde_supporting_data/data/selection/catalytic_residue_by_sequence.tsv	scripts/release/build_data_deposit.py	current catalytic residue calls from this build's origin-domain membership
+generated	pcwde_supporting_data/data/sequence_sets/pcwde_sequence_set_membership.tsv	scripts/release/build_data_deposit.py	current build sequence-set membership producer output
+generated	pcwde_supporting_data/data/sequence_sets/pcwde_sequence_set_summary.tsv	scripts/release/build_data_deposit.py	current build sequence-set summary producer output
+generated	pcwde_supporting_data/data/cazy_subfamily/all_unit_counts.tsv	scripts/release/build_data_deposit.py	all genome-by-CAZy-unit gene counts from this build
+generated	pcwde_supporting_data/data/cazy_subfamily/native_component_counts.tsv	scripts/release/build_data_deposit.py	per-genome native eCAMI group counts from this build
+generated	pcwde_supporting_data/data/cazy_subfamily/primary_ecami_ranks.tsv	scripts/release/build_data_deposit.py	largest focal eCAMI group and pooled upper-bound ranks from this build
+generated	pcwde_supporting_data/data/cazy_subfamily/per_genome_cazy_ranks.tsv	scripts/release/build_data_deposit.py	full per-genome primary and secondary-route rank rows behind the condensed reader table
+generated	pcwde_supporting_data/data/cazy_subfamily/paired_ranks.tsv	scripts/release/build_data_deposit.py	paired accepted and scan PCWDE subfamily ranks
+generated	pcwde_supporting_data/data/cazy_subfamily/lineage_summary.tsv	scripts/release/build_data_deposit.py	lineage-level rank summary
+generated	pcwde_supporting_data/data/cazy_subfamily/top_native.tsv	scripts/release/build_data_deposit.py	top native CAZy units by lineage
+generated	pcwde_supporting_data/data/chromosome_gain/ecami_scores.tsv	scripts/release/build_data_deposit.py	eCAMI retained-gain group scores from this build
+generated	pcwde_supporting_data/data/chromosome_gain/ecami_tip_states.tsv	scripts/release/build_data_deposit.py	eCAMI and focal BK-chromosome tip states from this build
+generated	pcwde_supporting_data/data/chromosome_gain/ecami_node_changes.tsv	scripts/release/build_data_deposit.py	focal retained-gain and loss branches from this build
+generated	pcwde_supporting_data/data/chromosome_gain/background_eligibility.tsv	scripts/release/build_data_deposit.py	native eCAMI eligibility from this build
+generated	pcwde_supporting_data/data/chromosome_gain/hand_checks.tsv	scripts/release/build_data_deposit.py	focal and native branch checks from this build
+generated	pcwde_supporting_data/data/chromosome_gain/focal_summary.tsv	scripts/release/build_data_deposit.py	focal all-mode summary and native midranks from this build
+generated	pcwde_supporting_data/data/chromosome_gain/copy_strata.tsv	scripts/release/build_data_deposit.py	native copy-stratum summaries from this build
+generated	pcwde_supporting_data/data/chromosome_gain/focal_scan_sensitivity.tsv	scripts/release/build_data_deposit.py	largest-component eCAMI sensitivity from this build
+generated	pcwde_supporting_data/data/chromosome_gain/focal_component_sizes.tsv	scripts/release/build_data_deposit.py	gene-collapsed focal component sizes from this build
+generated	pcwde_supporting_data/data/chromosome_gain/focal_scan_eligibility.tsv	scripts/release/build_data_deposit.py	fixed focal component coverage and crown eligibility from this build
+generated	pcwde_supporting_data/data/chromosome_gain/focal_scan_max_diagnostic.tsv	scripts/release/build_data_deposit.py	historical genome-wise maximum scan diagnostic from this build
+copy	pcwde_supporting_data/data/{rest}	deposit/base/data/{rest}	reader data copied from deposit/base/data
+generated	pcwde_supporting_data/sequences/origin_context_GH5_2.faa	scripts/release/build_data_deposit.py	reader FASTA regenerated from accepted full origin-tree input
+generated	pcwde_supporting_data/sequences/origin_context_PL1_8.faa	scripts/release/build_data_deposit.py	reader FASTA regenerated from accepted full origin-tree input
+generated	pcwde_supporting_data/sequences/origin_context_PL4_4.faa	scripts/release/build_data_deposit.py	reader FASTA regenerated from accepted full origin-tree input
+copy	pcwde_supporting_data/sequences/{rest}	deposit/base/sequences/{rest}	reader sequences copied from deposit/base/sequences
+copy	pcwde_supporting_data/alignments/{rest}	deposit/base/alignments/{rest}	reader alignments copied from deposit/base/alignments
+copy	pcwde_supporting_data/trees/{rest}	deposit/base/trees/{rest}	reader trees copied from deposit/base/trees
+copy	pcwde_supporting_data/sidecars/{rest}	deposit/base/sidecars/{rest}	reader sidecars copied from deposit/base/sidecars

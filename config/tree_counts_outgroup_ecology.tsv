@@ -1,0 +1,16 @@
+species	gall_associated	herbivorous	basis
+Drosophila_melanogaster	no	no	Fruit and decaying-organic-matter larval feeding; no galling.
+Bradysia_coprophila	no	no	Fungus-gnat larvae feed on fungi and decaying organic matter; no galling.
+Contarinia_nasturtii	yes	yes	Gall midge on crucifer hosts; Adam's 2026-10-16 trait call.
+Mayetiola_destructor	yes	yes	Hessian fly induces plant galls; Adam's 2026-10-16 trait call.
+Athalia_rosae	no	yes	Sawfly larvae consume host-plant foliage.
+Neodiprion_lecontei	no	yes	Sawfly larvae consume pine foliage.
+Cephus_cinctus	no	yes	Sawfly larvae develop in and consume wheat stems.
+Orussus_abietinus	no	no	Parasitoid wasp; larvae develop on wood-boring insects.
+Microplitis_demolitor	no	no	Parasitoid wasp of caterpillars.
+Solenopsis_invicta	no	yes	Omnivorous ant with plant-derived food; Adam's 2026-10-16 trait call.
+Habropoda_laboriosa	no	yes	Pollen-feeding bee; Adam's 2026-10-16 trait call.
+Ceratina_calcarata	no	yes	Pollen-feeding bee; Adam's 2026-10-16 trait call.
+Apis_mellifera	no	yes	Pollen-feeding bee; Adam's 2026-10-16 trait call.
+Bombus_terrestris	no	yes	Pollen-feeding bee; Adam's 2026-10-16 trait call.
+Nasonia_vitripennis	no	no	Parasitoid wasp of fly pupae.
