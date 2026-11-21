@@ -53,14 +53,18 @@ def main():
             figure_counts[source_to_species[r['accession']]] = int(r['gh1e72_locus_count'])
     if set(figure_counts) != {r['species'] for r in manifest}:
         raise ValueError('Figure 1 GH1_e72 roster differs from 64 pinned scans')
+    reductions = Path(__file__).resolve().parents[2] / 'config/public_reference_reductions.tsv'
+    pin_only = {r['species'] for r in rows(reductions) if r['removed_kind'] == 'reference_proteome'}
     groups = {}
     gene_rows, count_rows, component_rows, component_gene_rows = [], [], [], []
     gh1_rows, multi_rows, protein_rows, competing_rows = [], [], [], []
     for item in manifest:
         species = item['species']
         scan = resolve_input(args.source_root, item['scan_path'])
-        proteome = resolve_input(args.source_root, item['proteome_path'])
-        if sha(scan) != item['scan_sha256'] or sha(proteome) != item['proteome_sha256']:
+        if not item['proteome_path'] and species not in pin_only:
+            raise ValueError(f'{species}: blank proteome path is allowed only for listed public references')
+        proteome = resolve_input(args.source_root, item['proteome_path']) if item['proteome_path'] else None
+        if sha(scan) != item['scan_sha256'] or (proteome and sha(proteome) != item['proteome_sha256']):
             raise ValueError(f'{species}: pinned scan or proteome hash mismatch')
         hits = rows(scan)
         proteins = {h['Target Name'] for h in hits}

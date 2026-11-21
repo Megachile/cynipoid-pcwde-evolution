@@ -105,6 +105,11 @@ def main():
     for sp in sorted(manifest):
         item = manifest[sp]
         pin = processed[sp]
+        if not pin['processed_path']:
+            # Public reference proteome (Table S1 accession), not redistributed.
+            if members[sp]:
+                raise ValueError(f'{sp}: accepted members need the processed FASTA')
+            continue
         path = resolve_input(a.source_root, pin['processed_path'])
         if sha(path) != pin['processed_sha256']:
             raise ValueError(f'{sp}: processed FASTA hash mismatch')

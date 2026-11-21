@@ -73,8 +73,15 @@ def main():
     coverage, reconciliation, unresolved = [], [], []
     for row in manifest:
         sp = row['species']
-        scan_input = resolve_input(args.source_root, row['proteome_path'])
         scan = resolve_input(args.source_root, row['scan_path'])
+        if not row['proteome_path']:
+            # Public reference proteome (Table S1 accession), kept only as a SHA-256 pin.
+            if members[sp] or file_hash(scan) != row['scan_sha256']:
+                raise ValueError(f'{sp}: unredistributed proteome with members or scan hash mismatch')
+            coverage.append((sp, row['source_key'], '', row['proteome_sha256'], row['scan_path'],
+                             row['scan_sha256'], '', '', 'public_reference_not_redistributed'))
+            continue
+        scan_input = resolve_input(args.source_root, row['proteome_path'])
         if file_hash(scan_input) != row['proteome_sha256'] or file_hash(scan) != row['scan_sha256']:
             raise ValueError(f'{sp}: scan manifest hash mismatch')
         candidate = paper.get(sp)

@@ -17,7 +17,8 @@ def _attrs(text):
             for k, v in [part.split('=', 1)]}
 
 
-def _gff_genes(path, wanted, bk=False):
+def _gff_index(path, bk=False):
+    """Protein key -> candidate gene keys, exactly as the GFF rule resolves them."""
     opener = gzip.open if path.suffix == '.gz' else open
     features = {}
     parents = defaultdict(set)
@@ -53,7 +54,7 @@ def _gff_genes(path, wanted, bk=False):
                         if x.startswith('GeneID:'):
                             direct[protein].add(x)
     if bk:
-        return _resolve(direct, wanted)
+        return dict(direct)
 
     def ancestors(starts):
         stack = list(starts)
@@ -72,8 +73,31 @@ def _gff_genes(path, wanted, bk=False):
             else:
                 stack.extend(ps)
         return genes
-    index = {p: ancestors(ps) or direct[p] for p, ps in parents.items()}
-    return _resolve(index, wanted)
+    return {p: ancestors(ps) or direct[p] for p, ps in parents.items()}
+
+
+def _gff_genes(path, wanted, bk=False):
+    return _resolve(_gff_index(path, bk=bk), wanted)
+
+
+def write_protein_gene_index(index, out):
+    """Write a GFF-derived index; one row per (protein key, gene key), empty gene kept."""
+    with Path(out).open('w', newline='') as handle:
+        writer = csv.writer(handle, delimiter='\t', lineterminator='\n')
+        writer.writerow(('protein_key', 'gene_key'))
+        for key in sorted(index):
+            for gene in sorted(index[key]) or ['']:
+                writer.writerow((key, gene))
+
+
+def read_protein_gene_index(path):
+    index = defaultdict(set)
+    with Path(path).open(newline='') as handle:
+        for row in csv.DictReader(handle, delimiter='\t'):
+            index[row['protein_key']]
+            if row['gene_key']:
+                index[row['protein_key']].add(row['gene_key'])
+    return dict(index)
 
 
 def _resolve(index, wanted):
@@ -94,6 +118,10 @@ def map_genes(method, mapping_source, proteins):
     proteins = set(proteins)
     if method in ('ncbi_gff', 'bk_ncbi_gff'):
         return _gff_genes(Path(mapping_source), proteins, bk=method == 'bk_ncbi_gff')
+    if method == 'protein_gene_index':
+        # Index derived from a public NCBI annotation GFF (Table S1 accession) by
+        # scripts/deposit_inputs/reduce_public_references.py; same resolution rule.
+        return _resolve(read_protein_gene_index(mapping_source), proteins)
     if method == 'canonical_annotation':
         with Path(mapping_source).open(newline='') as handle:
             index = {r['protein_id']: r.get('gene') or r.get('transcript_id') or

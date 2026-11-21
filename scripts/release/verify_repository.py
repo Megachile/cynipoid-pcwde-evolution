@@ -44,7 +44,7 @@ PUBLIC_MANIFESTS = {
     "authority/source_decisions.json", "config/manuscript_current_pointers.json",
     "scripts/analysis/synteny/modelless_recovery/RECOVERY_PINS.tsv",    "config/logical_inputs.tsv", "config/build_inputs.tsv", "config/deposit_sources.tsv", "config/figure_numbers.tsv", "config/closure_declared.tsv", "config/deposit_layout.tsv", "config/upstream_locked_inputs.tsv", "config/chromosome_gain_sources.tsv", "config/deposit_size_baseline.tsv", "config/manuscript_template.tex", "config/supplement_assembly.tex", "config/blectin_models.tsv", "config/intron_genome_sources.tsv", "config/intron_seqid_aliases.tsv", "config/intron_snapshot_sources.tsv", "config/intron_sources.tsv", "config/intron_frozen_sources.tsv", "config/table_numbers.tsv", "config/supplement_sections.tsv", "config/supplement_paragraphs.tsv", "config/supplement_seed_checks.tsv", "authority/supplement/SOURCE_MANIFEST.tsv", "config/supplement_literals.tsv",
     "config/cazy_stage_sources.tsv", "config/cazy_lineage_groups.tsv", "config/cazy_processed_proteomes.tsv", "config/cazy_paper_proteomes.tsv", "config/cazy_scans.tsv", "config/ecami_focal_parity.tsv",
-    "config/synteny_derived_pins.tsv", "config/synteny_existing_sources.tsv",
+    "config/synteny_derived_pins.tsv", "config/synteny_existing_sources.tsv", "config/public_reference_reductions.tsv",
     "config/supplement_accessory_domain_trees.tex", "config/supplement_b_lectin_domain_tree.tex", "config/supplement_complete_locus_trees.tex",
     "config/supplement_euceroptres_genome.tex", "config/supplement_origin_trees_full.tex", "config/supplement_tree_counts_full.tex",
     "docs/methods_code_crosswalk.tsv",

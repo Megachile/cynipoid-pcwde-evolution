@@ -14,7 +14,7 @@ MANIFEST_FIELDS = (
     "logical_id", "figshare_relative_path", "sha256", "bytes", "role",
     "producer_authority", "consuming_commands",
 )
-SOURCE_MANIFEST_SHA256 = "62b286b2b8002af0e14977e72bbb0e608989999754f1a0ffa7bd254f119b3ad3"
+SOURCE_MANIFEST_SHA256 = "b4f9ee11a12d7877f8d84975bbaa8211f636a745d7315a6c5132613974acd7f3"
 
 
 def sha256(path: Path) -> str:
@@ -134,7 +134,7 @@ def validate_reader_inputs(repo: Path, data_root: Path) -> list[dict[str, str]]:
             raise SystemExit("logical-input manifest schema mismatch")
         rows = list(reader)
     expected = {row["figshare_relative_path"] for row in rows}
-    if len(rows) != 480 or len(expected) != len(rows):
+    if len(rows) != 465 or len(expected) != len(rows):
         raise SystemExit("source-pin path inventory mismatch")
     projected = data_root / "PROJECTED_INPUTS.tsv"
     if not projected.exists() and not projected.is_symlink():

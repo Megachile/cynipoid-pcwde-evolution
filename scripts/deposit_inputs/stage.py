@@ -593,7 +593,7 @@ def rescue_overlay(inputs, workspace):
     shutil.copyfile(source, target)
 
 
-def cazy_inputs(inputs, workspace, expected_rows=148, require_scan_pins=True):
+def cazy_inputs(inputs, workspace, expected_rows=133, require_scan_pins=True):
     """Stage the frozen scan sources and the one portable provenance projection."""
     if (inputs / "cazy_inputs").exists():
         raise SystemExit("unexpected pre-existing CAZy input tree")
@@ -641,7 +641,7 @@ def cazy_inputs(inputs, workspace, expected_rows=148, require_scan_pins=True):
         for row in csv.DictReader(handle, delimiter="\t"):
             scan_paths.update(row[k] for k in ("proteome_path", "scan_path", "mapping_source") if row[k])
     with (REPO / "config/cazy_processed_proteomes.tsv").open(newline="") as handle:
-        scan_paths.update(row["processed_path"] for row in csv.DictReader(handle, delimiter="\t"))
+        scan_paths.update(row["processed_path"] for row in csv.DictReader(handle, delimiter="\t") if row["processed_path"])
     if require_scan_pins and not scan_paths <= declared:
         raise SystemExit(f"CAZy scan/processed pins absent from source map: {sorted(scan_paths - declared)}")
     print(f"CAZY_STAGE_PASS files={len(declared)} pins={len(scan_paths)}")
