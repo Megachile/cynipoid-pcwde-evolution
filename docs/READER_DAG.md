@@ -1,9 +1,5 @@
 # Reproduction graph
 
-The repository separates computational results from display. The paired supporting-data archive
-holds the scientific inputs and intermediates; Git holds their consumers. The
-local package will be published at the reserved Figshare DOI with the manuscript.
-
 ```text
 Figshare archive
   └── pcwde_supporting_data/repository_inputs/

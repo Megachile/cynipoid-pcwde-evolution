@@ -19,7 +19,7 @@ tree inference or imply ancestry.
 
 The submission version distinguishes Euceroptres primus read BioProject
 PRJNA1518226 from the genome assembly accession, which is pending; it adds
-the GitHub code link and identifies the Figshare public release as pending.
+the GitHub code link and includes the Figshare data reference.
 All other author text is preserved.
 
 MBE mechanical formatting adds the two author-confirmed corresponding contacts,
@@ -30,16 +30,11 @@ Scientific prose, figure captions and the reference list remain unchanged.
 The eight figure alt-text descriptions were reviewed and approved by the author
 and are incorporated verbatim beneath their corresponding legends.
 
-Current-draft rendering (2026-11-09): the build now typesets
-`manuscript_draft_20261109T042633Z.md`, the author's Google Doc draft as last
-modified 2026-11-09T04:26:33Z (raw export SHA-256
-`dffbf37729e832ff23c2c43844b29828e3d7004cd506b772630cde46ea67ba6f`; it replaces
-the 2026-11-08T02:17:04Z draft, raw SHA-256
-`4986048fdf323cb734813b2853b006f09a082dd1236d0d9e578a4bd3872fb996`), with the
-sync header line and the embedded base64 figure images removed; prose is
-otherwise verbatim. Figures come from the build and are placed by figure number.
-The draft carries no alt text, so each figure's approved alt text is taken from
-`manuscript_current.md`, which stays unchanged as the submission record (tag
-d14f7dc).
-
-Current author draft: `manuscript_draft_20261118T0422Z.md`, stripped SHA256 `138e0fb97788587d3fafb77e8df4b6a314c2a38c39325310603b49a8777efc25`. The Data Availability paragraph places the unchanged E. primus sentence first and adds the author-provided analysis-code URL; preceding prose is unchanged. It supersedes the earlier exports. The rendering source is its exact copy, `manuscript_source_pending.md` (historical filename). Approved numeric substitutions are declared in `config/author_result_routes.json` and Table S3 parent counts in `author_outgroup_counts.py`; author words are preserved, including the corrected GC3 direction wording. Supplement references are projected through the current pointer receipt. Raw exports remain outside Git.
+Current rendering source: `manuscript_source.md`, SHA256
+`138e0fb97788587d3fafb77e8df4b6a314c2a38c39325310603b49a8777efc25`.
+The source is the author export with the sync header and embedded images removed.
+Figures come from the build; approved alt text comes from the unchanged submission
+record `manuscript_current.md`. Approved numeric substitutions are declared in
+`config/author_result_routes.json` and `author_outgroup_counts.py`; supplement
+references use `config/manuscript_current_pointers.json`. Earlier exports remain
+in Git history.

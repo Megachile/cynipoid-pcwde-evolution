@@ -25,7 +25,7 @@ repo = a.repo.resolve()
 template = (repo / "authority/supplement/supplement_source.md").read_text()
 numbers = json.loads(a.numbers.read_text())
 failures = []
-pending_path = repo / 'authority/source_refresh_pending.json'
+pending_path = repo / 'authority/source_decisions.json'
 if pending_path.exists() and json.loads(pending_path.read_text())['exceptions']:
     # A pending source decision must block fixture and production invocations alike.
     # Numeric negative fixtures below run after the source decision is resolved.

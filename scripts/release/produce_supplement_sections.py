@@ -40,7 +40,7 @@ with (repo / 'config/figure_numbers.tsv').open() as f:
     figures = {r['figure_id']: r['label'] for r in csv.DictReader(f, delimiter='\t')}
 with (repo / 'config/table_numbers.tsv').open() as f:
     tables = {r['table_id']: r['label'] for r in csv.DictReader(f, delimiter='\t')}
-pending = repo / "authority/source_refresh_pending.json"
+pending = repo / "authority/source_decisions.json"
 if pending.exists() and json.loads(pending.read_text())["exceptions"]:
     raise SystemExit("author source refresh has pending decisions; full build prohibited")
 # Item placement is derived independently from the immutable author export.

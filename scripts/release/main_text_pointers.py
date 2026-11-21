@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Main-text supplement pointers: legacy draft label -> stable ID -> final label, plus a failing gate.
 
-The pinned author draft (authority/manuscript/manuscript_draft_20261109T042633Z.md) cites the
+The pinned author draft (authority/manuscript/manuscript_source.md) cites the
 supplement with the numbering in use when it was written. Each legacy label is resolved by its
 subject to a stable ID here; the final label is then read from the committed number maps
 (config/table_numbers.tsv, config/figure_numbers.tsv, config/supplement_sections.tsv), so a

@@ -162,19 +162,6 @@ previews:
 	@mkdir -p "$(BUILD)/previews"; \
 	  "$(PREVIEW_GS)" -q -dNOPAUSE -dBATCH -dSAFER -sDEVICE=png16m -r100 -sOutputFile="$(BUILD)/previews/Supplement_%03d.png" "$(BUILD)/supplement/supplement.pdf"
 
-# Page preview uses a caller-pinned draft snapshot; output stays under BUILD.
-.PHONY: fig2-page-preview
-fig2-page-preview:
-	$(PYTHON) -B scripts/release/assemble_fig2_evidence.py preview --repo $(CURDIR) --build $(BUILD) --figure $(BUILD)/figures/origin_trees/origin_trees.pdf --out $(BUILD)/previews/fig2_candidate_page
-
-.PHONY: fig2-before-preview fig2-evidence
-fig2-before-preview:
-	$(PYTHON) -B scripts/release/assemble_fig2_evidence.py preview --repo $(CURDIR) --build $(BUILD) --figure $(BASE_BUILD)/figures/origin_trees/origin_trees.pdf --out $(BUILD)/previews/fig2_before_page --baseline $(BASE_BUILD)
-
-fig2-evidence:
-	$(RSCRIPT) scripts/trees/compare_frozen_origin_views.R $(FROZEN_DIR) $(BUILD)/trees $(BUILD)/frozen_vs_pruning.tsv
-	$(PYTHON) -B scripts/release/assemble_fig2_evidence.py packet --repo $(CURDIR) --build $(BUILD) --baseline $(BASE_BUILD) --closure $(CLOSURE_LOG) --build-log $(BUILD_LOG) --frozen $(FROZEN_DIR) --comparison $(BUILD)/frozen_vs_pruning.tsv --invocation $(INVOCATION_LOG) --expected-sha $(EXPECTED_SHA)
-
 # Targeted visual fixture: same expression producer and S2a renderer as the full paper build.
 .PHONY: table-s2a-fixture
 table-s2a-fixture:

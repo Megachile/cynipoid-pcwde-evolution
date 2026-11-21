@@ -23,35 +23,25 @@ TOTAL_GIT_BYTE_LIMIT = 8_388_608
 MANUSCRIPT_RELATIVE_PATH = "authority/manuscript/manuscript_current.md"
 MANUSCRIPT_BYTES = 129011
 MANUSCRIPT_SHA256 = "5e6b453cbbde5f5cf4dc98d16057aff9286cdf7b619bb96e9fda83aa39394355"
-DRAFT_RELATIVE_PATH = "authority/manuscript/manuscript_draft_20261109T042633Z.md"
-DRAFT_BYTES = 114616
-DRAFT_SHA256 = "93c0dc55d8fa69e75084c6942de261e426f6a3adfac5b3f83fba107e7acdaaac"
 STALE_MANUSCRIPT_SHA256 = "22f987bcdd57e23ecea951f92773a7c92bd0497c52b5d0e9972e34d067c82df9"
 SOURCE_AUTHORITY_RELATIVE_PATH = "authority/manuscript/SOURCE_AUTHORITY.md"
-SOURCE_AUTHORITY_BYTES = 3370
-SOURCE_AUTHORITY_SHA256 = "57392131905c5d2573247ac2d43eb25ce45c44201edca5ec5a255c9eba0eb31c"
-FIG8_CAPTION_RELATIVE_PATH = "authority/manuscript/figure8_caption.md"
-FIG8_CAPTION_BYTES = 793
-FIG8_CAPTION_SHA256 = "8497c24020123c7313af69e77258398922049c17d251afe84e8479e80830b506"
+SOURCE_AUTHORITY_BYTES = 2439
+SOURCE_AUTHORITY_SHA256 = "6425740907e95d702dea70a404294686b0e842d00f08d171a36dd356b42f1ca3"
 RENDER_ALL_SHA256 = "bfc431c4d96d4d04fd90cdcadbb7d981532decf5d5f8851a42d90c31357f6c44"
-CURRENT_DRAFT_IDENTITIES = {'authority/manuscript/manuscript_draft_20261118T0422Z.md': [114713, '138e0fb97788587d3fafb77e8df4b6a314c2a38c39325310603b49a8777efc25'], 'authority/manuscript/manuscript_draft_20261115T1730Z.md': [114601, 'c791e1cb6dbcc4bc2b4d21364ff7e0436f768215ba286cc6d3704e17b8650502'], 'authority/manuscript/manuscript_draft_20261116T0230Z.md': [114616, 'bf2fbf3d411df38edbf09d7cf4136395e6a2e67c64c4336dab7bc5f8bd4e9f2c'], 'authority/manuscript/manuscript_draft_20261116T0330Z.md': [114579, '2d9e8e5ea8cd30ac1fef828bdaa669d3aa93ab8834e0d930620162e096a51a7b'], 'authority/manuscript/manuscript_draft_20261116T0420Z.md': [114592, 'b6975af9d695932b653d9ef5156420d91552badd62dfc0c7b197a88c0f77b723'], 'authority/manuscript/manuscript_draft_20261116T1531Z.md': [114630, '0b1a5886f00215b323db8c24d1cc34ea39f6ba5b50eeaf08c21bc58428ea9d7b'], 'authority/manuscript/manuscript_draft_20261117T1715Z.md': [114628, '12942768a47d3caad15dfd338442148d7eb7495748a8bae379c48b6bfadd432c'], 'authority/manuscript/manuscript_source_pending.md': [114713, '138e0fb97788587d3fafb77e8df4b6a314c2a38c39325310603b49a8777efc25']}
+CURRENT_DRAFT_IDENTITIES = {'authority/manuscript/manuscript_source.md': [114713, '138e0fb97788587d3fafb77e8df4b6a314c2a38c39325310603b49a8777efc25']}
 PUBLIC_DOCUMENTATION = {
-    "authority/supplement/supplement_draft_20261118T0358Z.md",
+    "authority/supplement/supplement_author_export.md",
     "docs/PUBLIC_SCOPE_PROJECTION.md", "docs/CAZY_PRECISION.md",
-    "authority/supplement/supplement_draft_20261117T1715Z.md",
-    "authority/supplement/supplement_draft_20261116T1531Z.md",
-    "authority/supplement/supplement_draft_20261116T0420Z.md",
-    *CURRENT_DRAFT_IDENTITIES, "authority/supplement/supplement_draft_20261115T1730Z.md",
-    "scripts/analysis/synteny/modelless_recovery/METHOD.md",    "README.md", "LICENSE", "CITATION.cff", "docs/DATA_ACCESS.md",
+    *CURRENT_DRAFT_IDENTITIES, "scripts/analysis/synteny/modelless_recovery/METHOD.md",    "README.md", "LICENSE", "CITATION.cff", "docs/DATA_ACCESS.md",
     "docs/SUPPLEMENT_COPY_RANK_METHOD.md", "docs/SUPPLEMENT_GAIN_LINEAGE_METHOD.md",
     "docs/SUPPLEMENT_SYNTENY_SUMMARY_METHOD.md", "docs/SUPPLEMENT_TABLE_DOMAIN_SUMMARY_METHOD.md",
-    "docs/READER_DAG.md", "docs/ORIGIN_DISPLAY_TREES.md", "docs/SUPPLEMENT_DRAFT_REFRESH.md", "docs/SUPPLEMENT_DOC_EDIT_REPORT_20261110.md", "docs/CATALYTIC_SET_METHOD.md", "docs/CATALYTIC_CLUSTERING_METHOD.md", "docs/figure_s4_architecture_method.md", "docs/figure_s6_rendering.md", "docs/pinned_hybrid_transition.md", "scripts/release/PACKAGING_BOUNDARY.md", "scripts/figures/README.md", "scripts/deposit_inputs/README.md", "scripts/tables/README.md", MANUSCRIPT_RELATIVE_PATH, SOURCE_AUTHORITY_RELATIVE_PATH, FIG8_CAPTION_RELATIVE_PATH, "authority/supplement/revision_draft_text.md", "authority/supplement/supplement_draft_20261102T234911Z.md", "upstream/supplement_table_sources/README.md", "docs/upstream_dbcan_sub.md", DRAFT_RELATIVE_PATH, "authority/supplement/supplement_draft_20261108T023458Z.md", "authority/supplement/supplement_draft_20261109T054239Z.md", "authority/supplement/supplement_draft_20261110T144642Z.md", "authority/supplement/supplement_source.md", "authority/captions/author_captions.json",
+    "docs/READER_DAG.md", "docs/ORIGIN_DISPLAY_TREES.md", "docs/CATALYTIC_SET_METHOD.md", "docs/CATALYTIC_CLUSTERING_METHOD.md", "docs/figure_s4_architecture_method.md", "docs/figure_s6_rendering.md", "docs/pinned_hybrid_transition.md", "scripts/release/PACKAGING_BOUNDARY.md", "scripts/figures/README.md", "scripts/deposit_inputs/README.md", "scripts/tables/README.md", MANUSCRIPT_RELATIVE_PATH, SOURCE_AUTHORITY_RELATIVE_PATH, "upstream/supplement_table_sources/README.md", "docs/upstream_dbcan_sub.md", "authority/supplement/supplement_source.md", "authority/captions/author_captions.json",
 }
 PUBLIC_MANIFESTS = {
     "config/intron_manifest_bridge.json",
     "config/source_aliases.tsv",
     "config/author_result_routes.json",
-    "authority/source_refresh_pending.json", "config/manuscript_current_pointers.json",
+    "authority/source_decisions.json", "config/manuscript_current_pointers.json",
     "scripts/analysis/synteny/modelless_recovery/RECOVERY_PINS.tsv",    "config/logical_inputs.tsv", "config/build_inputs.tsv", "config/deposit_sources.tsv", "config/figure_numbers.tsv", "config/closure_declared.tsv", "config/deposit_layout.tsv", "config/upstream_locked_inputs.tsv", "config/chromosome_gain_sources.tsv", "config/deposit_size_baseline.tsv", "config/manuscript_template.tex", "config/supplement_assembly.tex", "config/blectin_models.tsv", "config/intron_genome_sources.tsv", "config/intron_seqid_aliases.tsv", "config/intron_snapshot_sources.tsv", "config/intron_sources.tsv", "config/intron_frozen_sources.tsv", "config/table_numbers.tsv", "config/supplement_sections.tsv", "config/supplement_paragraphs.tsv", "config/supplement_seed_checks.tsv", "authority/supplement/SOURCE_MANIFEST.tsv", "config/supplement_literals.tsv",
     "config/cazy_stage_sources.tsv", "config/cazy_lineage_groups.tsv", "config/cazy_processed_proteomes.tsv", "config/cazy_paper_proteomes.tsv", "config/cazy_scans.tsv", "config/ecami_focal_parity.tsv",
     "config/synteny_derived_pins.tsv", "config/synteny_existing_sources.tsv",
@@ -64,15 +54,13 @@ PUBLIC_CONFIGURATION = {
     "config/public_retired_inputs.txt", "config/public_scope_pins.tsv",".gitignore", "Makefile", "config/excluded_expression_samples.tsv"}
 PUBLIC_INTERMEDIATES = {"scripts/analysis/catalytic/clustering/LOCKED_ANALYSIS.json"}
 PUBLIC_FIXTURES = {"config/bp_cb_prune_plan.tsv", "config/ecology_states.tsv", "config/tree_counts_remnant.tsv", "config/tree_counts_outgroup_ecology.tsv", "config/origin_display_tips.tsv"}
-PREVIEW_DRAFT = "config/fig2_preview_draft.md"
-PREVIEW_DRAFT_SHA256 = "5b015b83fa9fc7762a7f87d48936d02f9c6e70ec63f8831982ad70880342bf94"
 SYNTENY_PROVENANCE = "scripts/analysis/synteny/PROVENANCE.tsv"
 REQUIRED_CLAIMS = {
     "README.md": (
         'Multiple ancient gene transfers from bacteria facilitated herbivory in cynipoid wasps',
-        "Some large or externally sourced upstream inputs are not redistributed",
-        "Expensive MAFFT, IQ-TREE, and HyPhy results are not rerun by the manuscript target",
-        "synteny release code consumes the deposited final-49 locus and block tables",
+        "some large upstream inputs (genome assemblies, GFFs) are not redistributed",
+        "the build does not rerun them",
+        "docs/methods_code_crosswalk.tsv",
     ),
     "docs/READER_DAG.md": (
         "does not rerun MAFFT/IQ-TREE inference",
@@ -105,8 +93,6 @@ def admitted_git_class(root: Path, path: Path) -> str | None:
         matches.append("behavioral_fixture")
     if relative in PUBLIC_INTERMEDIATES:
         matches.append("documented_intermediate")
-    if relative == PREVIEW_DRAFT and digest(path) == PREVIEW_DRAFT_SHA256:
-        matches.append("presentation_input")
     return matches[0] if len(matches) == 1 else None
 
 
@@ -124,20 +110,18 @@ def read_tsv(path: Path) -> list[dict[str, str]]:
 
 
 def manuscript_authority_failures(root: Path, files: list[Path]) -> list[str]:
-    """Require every exact manifest-bound historical and current source file."""
+    """Require the exact manifest-bound submission record and current source files."""
     failures: list[str] = []
     authority_root = root / "authority/manuscript"
     if authority_root.is_symlink() or not authority_root.is_dir():
         return ["manuscript authority directory is missing or nonregular"]
     objects = sorted(path.relative_to(root).as_posix() for path in authority_root.rglob("*"))
-    expected = sorted((MANUSCRIPT_RELATIVE_PATH, SOURCE_AUTHORITY_RELATIVE_PATH, FIG8_CAPTION_RELATIVE_PATH, DRAFT_RELATIVE_PATH, *CURRENT_DRAFT_IDENTITIES))
+    expected = sorted((MANUSCRIPT_RELATIVE_PATH, SOURCE_AUTHORITY_RELATIVE_PATH, *CURRENT_DRAFT_IDENTITIES))
     if objects != expected:
         failures.append(f"manuscript authority set mismatch expected={expected} actual={objects}")
     identities = {
         MANUSCRIPT_RELATIVE_PATH: (MANUSCRIPT_BYTES, MANUSCRIPT_SHA256),
         SOURCE_AUTHORITY_RELATIVE_PATH: (SOURCE_AUTHORITY_BYTES, SOURCE_AUTHORITY_SHA256),
-        FIG8_CAPTION_RELATIVE_PATH: (FIG8_CAPTION_BYTES, FIG8_CAPTION_SHA256),
-        DRAFT_RELATIVE_PATH: (DRAFT_BYTES, DRAFT_SHA256),
         **CURRENT_DRAFT_IDENTITIES,
     }
     for relative, (expected_bytes, expected_sha256) in identities.items():
@@ -156,8 +140,6 @@ def manuscript_authority_failures(root: Path, files: list[Path]) -> list[str]:
             failures.append(f"checksum-pinned manuscript was relabelled: {relative}")
         if file_digest == STALE_MANUSCRIPT_SHA256:
             failures.append(f"forbidden stale manuscript present: {relative}")
-        if file_digest == FIG8_CAPTION_SHA256 and relative != FIG8_CAPTION_RELATIVE_PATH:
-            failures.append(f"checksum-pinned Figure 8 caption was relabelled: {relative}")
         if file_digest == SOURCE_AUTHORITY_SHA256 and relative != SOURCE_AUTHORITY_RELATIVE_PATH:
             failures.append(f"checksum-pinned source authority was relabelled: {relative}")
     return failures

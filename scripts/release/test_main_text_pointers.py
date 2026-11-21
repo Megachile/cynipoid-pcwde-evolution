@@ -8,7 +8,7 @@ import fitz
 import build_manuscript as bm
 
 raw = bm.SOURCE.read_text()
-pending = json.loads((bm.PAPER / 'authority/source_refresh_pending.json').read_text())['exceptions']
+pending = json.loads((bm.PAPER / 'authority/source_decisions.json').read_text())['exceptions']
 if pending:
     try:
         bm.validate_frozen_authority()

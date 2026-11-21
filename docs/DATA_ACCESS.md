@@ -1,8 +1,7 @@
 # Supporting-data access
 
-The code is paired with `pcwde_supporting_data.tar.gz`, reserved for
-Figshare DOI `10.6084/m9.figshare.33265659`. The DOI will resolve when the
-supporting-data record is released.
+Download `pcwde_supporting_data.tar.gz` from
+Figshare DOI `10.6084/m9.figshare.33265659`.
 
 After downloading the archive and its `ARCHIVE.sha256` sidecar:
 
@@ -17,7 +16,7 @@ The archive has one top-level directory. `config/logical_inputs.tsv` maps the
 inputs used by repository code to paths and SHA-256 checksums. Within the
 archive, `MANIFEST.tsv` and `SHA256SUMS.txt` cover every packaged payload.
 
-The local package now includes full transfer-context trees with 427 GH5_2,
+The archive includes full transfer-context trees with 427 GH5_2,
 364 PL1_8 and 444 PL4_4 tips (365 and 446 were inferred; see below). For each family, `trees/origin_context_FAMILY_full.treefile`
 is paired with `alignments/origin_context_FAMILY_full.aln.faa` and the original
 unaligned MAFFT input `sequences/origin_context_FAMILY_full.faa`. Here “full”
@@ -35,7 +34,7 @@ comparison removes alignment gaps and stop symbols.
 the original hmmsearch hit rows restricted to those proteins, and historical
 trimmed FASTAs. Preprocessing requires no new HMM search. The corrected overlap
 rule produces diagnostic sequence differences; the manuscript targets use the
-fixed historical alignments and trees. Remote Figshare publication remains pending.
+fixed historical alignments and trees.
 
 Four *Bassettia pallida* transcript-derived sequences were removed after
 inference because they are near-identical to *Callirhytis quercusbatatoides*

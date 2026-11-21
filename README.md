@@ -1,86 +1,131 @@
-# PCWDE evolution in cynipoid wasps
+# Bacterial gene transfers and herbivory in cynipoid wasps
 
-This repository contains the analysis and rendering code for *Multiple ancient
-gene transfers from bacteria facilitated herbivory in cynipoid wasps*. The
-paired supporting-data archive is reserved for Figshare DOI
-`10.6084/m9.figshare.33265659` and will be released with the manuscript.
+Code for *Multiple ancient gene transfers from bacteria facilitated herbivory in
+cynipoid wasps*. This repository holds the code that turns the analysis results
+into the paper's figures, tables, supplement and manuscript PDF.
 
-Git contains code, configuration, and the manuscript source. Scientific data,
-alignments, trees, analysis tables, and figure inputs are in the paired
-supporting-data archive, which is not yet publicly released. The file
-`config/logical_inputs.tsv` connects each input used by the code to its
-Figshare-relative path and checksum.
+All genomes, transcriptomes and sequencing reads used in the paper come from
+public archives; accessions are listed in Table S1. The Figshare record
+[10.6084/m9.figshare.33265659](https://doi.org/10.6084/m9.figshare.33265659)
+is not new primary data. It is a set of intermediate files derived from those
+public sources (protein sets, alignments, trees, expression values, synteny
+and analysis tables) so the paper can be rebuilt without repeating
+genome annotation, read mapping or tree inference.
 
-## Reproduce the paper outputs
+## What's here
 
-1. Obtain and unpack the paired supporting-data archive (local until publication).
-2. Clone this repository.
-3. Set `PCWDE_DATA_ROOT` to the unpacked `pcwde_supporting_data` directory.
-4. Run:
+| Folder | Contents |
+|---|---|
+| `scripts/analysis/` | Analysis code: domain trimming, introns and GC3, catalytic sites, selection, synteny, chromosome gains |
+| `scripts/figures/` | One plotting script per figure (table below) |
+| `scripts/tables/` | Builders for the supplementary tables |
+| `scripts/members/` | Builds the master list of gene copies (species, family, chromosome) that the figures and tables share |
+| `scripts/release/` | Assembles the manuscript and supplement PDFs and runs consistency checks |
+| `config/` | Settings and lookup tables, including the map from each input file to its Figshare path and checksum (`logical_inputs.tsv`) |
+| `authority/` | Manuscript, supplement and caption text that the build typesets |
+| `docs/` | Method notes for individual analyses |
+| `environment/` | Python and R package versions |
+
+## Where each figure comes from
+
+| Figure | Content | Script (`scripts/figures/`) |
+|---|---|---|
+| 1, S2 | Species tree with gene counts | `tree_counts.py` |
+| 2, S3 | Origin trees with bacterial and eukaryotic outgroups | `origin_trees.R` |
+| 3 | Intron positions | `introns.py` |
+| 4, S5 | Cynipoid locus trees | `locus_trees.R`, `complete_locus_trees.R` |
+| 5 | B-lectin locus tree | `b_lectin_tree.R` |
+| 6 | Expression across tissues | `expression.py` |
+| S4 | GH30 and PI-PLC-X trees | `accessory_domain_trees/` |
+| S6 | B-lectin domain tree | `b_lectin_domain_tree/` |
+
+Figure S1 (*Euceroptres* genome) is a supplied image. Some script and folder
+names carry older figure or table numbers; `config/figure_numbers.tsv` and
+`config/table_numbers.tsv` give the current numbering.
+
+Trees and selection results were computed once (MAFFT, IQ-TREE, HyPhy) and are
+read from the Figshare data; the build does not rerun them.
+
+## Rebuilding the paper
+
+Download and unpack the Figshare archive, then:
 
 ```bash
-make verify
-make manuscript
+export PCWDE_DATA_ROOT=/path/to/pcwde_supporting_data
+make verify       # check the data against the recorded checksums
+make manuscript   # build every figure, table, the supplement and the manuscript under build/
 ```
 
-`make manuscript` also checks build closure (`scripts/release/check_closure.py`): every file under
-`repository_inputs/` must be read by the build or declared in `config/closure_declared.tsv` (frozen member
-layer, cached trees, out-of-family inputs, inventories, or a `known_gap` with its planned fix), and every
-reader-deposit file must match `config/deposit_layout.tsv`: a byte copy of the input at its mapped path, or a
-declared product of a named committed script written during this build. `scripts/release/test_check_closure.py`
-runs first and proves an unrelated file, an altered copy and a stale generated file all fail. Reads are detected from file access times
-on the extracted data root; the check fails if the filesystem does not track them. Known gaps are printed
-in every build log.
+Needs Python 3, R and XeLaTeX; package versions are in `environment/`.
+Details are below.
 
-`make verify` checks file inventories, SHA-256 checksums, and the Git/Figshare
-boundary. `make manuscript` renders Figures 1–6, Figures S1–S6, Tables S1–S10 (including S2a/S2b),
-and the manuscript PDF beneath `build/`.
+## License
 
-The rendering environment requires Python 3, R, XeLaTeX and `kpsewhich`. Python and R package versions are recorded under
-`environment/`. Executable locations can be supplied with the Make variables
-`PYTHON` and `RSCRIPT`. `scripts/release/local_env.bash LOCALDIR PYTHON_ENV R_ENV` writes
-wrappers with node-local font caches; `make manuscript` first checks both
-environments against the locks (`scripts/release/check_environment.py`).
+CC BY 4.0 (`LICENSE`). Cite as in `CITATION.cff`.
 
-## Analysis scope
+---
 
-The paper outputs are reproducible from the paired archived intermediates. The
-repository also preserves the current upstream analysis scripts used for
-domain processing, introns, synteny, catalytic sites, and selection. Some large
-or externally sourced upstream inputs are not redistributed, so these scripts
-are reference implementations rather than a promised raw-data-to-paper
-workflow. Expensive MAFFT, IQ-TREE, and HyPhy results are not rerun by the
-manuscript target. Figure renderers consume deposited trees, and the synteny
-release code consumes the deposited final-49 locus and block tables.
+## Reproduction details (for automated agents and the very thorough)
 
-The input/output graph is in `docs/READER_DAG.md`, and method-to-code links and
-input availability are in `docs/methods_code_crosswalk.tsv`.
+**Inputs.** `config/logical_inputs.tsv` lists the staged data inputs the build reads, with
+its archive-relative path and SHA-256. The archive's `MANIFEST.tsv` and
+`SHA256SUMS.txt` cover every packaged file. Verify the download with
+`sha256sum -c ARCHIVE.sha256` before unpacking. `make verify` checks
+inventories, checksums and the code/data boundary; with an extracted archive it
+also checks `PROJECTED_INPUTS.tsv`.
 
-The Make targets write beneath `build/` by default (`BUILD` overrides it).
-For standalone domain preprocessing, provide the family protein FASTAs and
-original `hmmsearch` domain tables in a separate input directory:
+**Environment.** Python and R versions are locked in `environment/python-lock.txt`
+and `environment/r-lock.txt`; `make manuscript` checks both first
+(`scripts/release/check_environment.py`). Override interpreters with the Make
+variables `PYTHON` and `RSCRIPT`; `BUILD` changes the output directory (default
+`build/`). `scripts/release/local_env.bash LOCALDIR PYTHON_ENV R_ENV` writes
+wrappers with node-local font caches, for shared filesystems. `kpsewhich` and
+Ghostscript must be on `PATH`.
+
+**Build order.** `make manuscript` runs, in order: environment and closure
+self-tests; the gene-copy table (`scripts/members/build_copy_table.py`,
+`build_locus_tips.py`); display pruning of the full origin trees
+(`scripts/trees/prune_origin_display_trees.R`, tip lists in
+`config/origin_display_tips.tsv`); CAZyme rank analysis
+(`make cazy-science`); intron and GC3 summaries (`make intron-gc3`); all figures
+(`scripts/release/render_all.bash`); chromosome-gain analysis
+(`make ecami-chromosome-gain`); table
+builders (`scripts/tables/`); the manuscript (`scripts/release/build_manuscript.py`)
+and supplement (`build_supplement.py`); and the supporting-data package
+(`make data-deposit`). Numbers quoted in the text are computed once
+(`build/numbers.json`) and the build fails if a figure, table or text value
+disagrees with them.
+
+**Closure check.** `scripts/release/check_closure.py` requires every file under
+`repository_inputs/` to be read by the build or declared in
+`config/closure_declared.tsv`, and every deposit file to match
+`config/deposit_layout.tsv`. Reads are detected from access times, so the data
+root must be on a filesystem that updates atime; the check fails otherwise.
+`scripts/release/test_check_closure.py` runs first to confirm that unrelated,
+altered and stale files are rejected.
+
+**What is not rerun.** Genome annotation, transcriptome assembly, read
+quantification, MAFFT/IQ-TREE inference and HyPhy are upstream; their outputs
+are in the archive. The full transfer-context trees (427/364/444 tips for
+GH5_2/PL1_8/PL4_4) are in `trees/`, alignments in `alignments/`, unaligned
+inputs in `sequences/`; `sidecars/origin_context_full_tip_mapping.tsv` maps
+alignment IDs to tree tips. Scripts under `scripts/analysis/` are the code that
+produced the deposited intermediates; some large upstream inputs (genome
+assemblies, GFFs) are not redistributed, so these are reference
+implementations, not a single raw-data-to-paper command.
+`docs/methods_code_crosswalk.tsv` links each Methods step to its code and input,
+and `docs/READER_DAG.md` shows the input/output graph.
+
+**Domain preprocessing (standalone).**
 
 ```bash
 python3 -B scripts/analysis/preprocess_domains.py --protein-dir /path/to/domain_inputs --output-dir build/proteins
 ```
 
-`--output-dir` defaults to `build/proteins` relative to the working directory.
-It must be a new directory, separate from and outside the input directory;
-existing output directories are rejected. All six required input files are
-checked before output creation. `PCWDE_PROTEIN_DIR` supplies the input default;
-otherwise the script uses `repository_inputs/analysis/domain_preparation`
-beneath `PCWDE_DATA_ROOT` (or `figshare_data`). The script preserves its inputs.
-
-Overlapping domain hits are considered in increasing independent domain E-value,
-with deterministic coordinate-based tie breaks. A retained hit blocks any other
-hit sharing an alignment residue (one-based inclusive coordinates). Retained
-hits are returned in sequence order. `--overlap-rule legacy-diagnostic` is only
-for comparison with historical start-first preprocessing. On the frozen inputs,
-the corrected rule yields 426/363/443 entries rather than 427/364/444 for
-GH5_2/PL1_8/PL4_4. These differences have not been adopted as new scientific
-inputs: `make manuscript` continues to use the fixed archived alignments and
-trees. Details of the full inference evidence are in `docs/DATA_ACCESS.md`.
-Run the interface, parser and overlap tests with
+The output directory must be new and outside the input directory. Overlapping
+hits are resolved by best independent E-value. On the frozen inputs this gives
+426/363/443 entries versus 427/364/444 in the historical alignments; the build
+uses the historical alignments and trees. Tests:
 `python3 -B scripts/analysis/test_preprocess_domains.py`.
 
-No provided command uploads, publishes, commits, pushes, or modifies a database.
+No command here uploads, publishes, pushes or writes to a database.

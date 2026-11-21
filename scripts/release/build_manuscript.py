@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Typeset the manuscript text with the rendered figures placed and numbered from config/figure_numbers.tsv.
 
-Text source: the pinned current draft (authority/manuscript/manuscript_source_pending.md,
+Text source: the pinned current draft (authority/manuscript/manuscript_source.md,
 Google Doc export of 2026-11-18T0422Z with its sync header and embedded images removed). In that
 draft image anchor imageN sits above the Figure N legend, so figures are placed by figure
 number. The draft carries no alt text; each figure's author-approved alt text is read from the
@@ -29,9 +29,8 @@ ROOT = Path(__file__).resolve().parent
 PAPER = ROOT.parents[1]
 SUBMITTED = PAPER / "authority/manuscript/manuscript_current.md"
 SUBMITTED_SHA = "5e6b453cbbde5f5cf4dc98d16057aff9286cdf7b619bb96e9fda83aa39394355"
-SOURCE = PAPER / "authority/manuscript/manuscript_source_pending.md"
+SOURCE = PAPER / "authority/manuscript/manuscript_source.md"
 EXPECTED_DRAFT_SHA = "138e0fb97788587d3fafb77e8df4b6a314c2a38c39325310603b49a8777efc25"
-FIG8_CAPTION = PAPER / "authority/manuscript/figure8_caption.md"
 FIGURE_ROOT = Path(os.environ.get("PCWDE_MANUSCRIPT_FIGURES", PAPER / "build/figures")).resolve()
 OUT = Path(os.environ.get("PCWDE_MANUSCRIPT_OUT", PAPER / "build/manuscript")).resolve()
 TEMPLATE = PAPER / "config/manuscript_template.tex"
@@ -49,13 +48,11 @@ def sha256(path: Path) -> str:
 
 def validate_frozen_authority() -> None:
     import json
-    pending = PAPER / "authority/source_refresh_pending.json"
+    pending = PAPER / "authority/source_decisions.json"
     if pending.exists() and json.loads(pending.read_text())["exceptions"]:
         raise RuntimeError("author source refresh has pending decisions; full build prohibited")
     if not SOURCE.is_file() or sha256(SOURCE) != EXPECTED_DRAFT_SHA:
         raise RuntimeError("manifested manuscript authority checksum mismatch")
-    if SOURCE.read_text() != (PAPER / "authority/manuscript/manuscript_draft_20261118T0422Z.md").read_text():
-        raise RuntimeError("manuscript source adoption is incomplete")
     if not SUBMITTED.is_file() or sha256(SUBMITTED) != SUBMITTED_SHA:
         raise RuntimeError("submitted manuscript record checksum mismatch")
     if sha256(SOURCE) == "22f987bcdd57e23ecea951f92773a7c92bd0497c52b5d0e9972e34d067c82df9":
