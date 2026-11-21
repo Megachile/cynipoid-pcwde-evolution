@@ -380,10 +380,24 @@ dom_row_h   <- 1.9
 
 # Domain key: 2 cols, right half of legend area
 dom_cols    <- 2
-dom_spacing <- 28
+# Fit both columns to the saved canvas, including every drawn domain label.
+# Fixed spacing previously put PI-PLC-X outside the SVG/PDF page.
+key_right <- max(vapply(seq_len(nrow(ann)), function(i) {
+  lab <- ann$one_best_tip_id[i]
+  anchor_x + target_offsets[lab] / aa_per_unit + (prot_lens[lab] - anchors[lab]) / aa_per_unit
+}, numeric(1)))
+grDevices::pdf(NULL)
+key_widths <- vapply(domain_names[tree_domains], function(label) {
+  grid::convertWidth(grid::grobWidth(grid::textGrob(label,
+    gp=grid::gpar(fontsize=2.8 * ggplot2::.pt))), "inches", valueOnly=TRUE)
+}, numeric(1)) * (key_right + 1 + 1.5 * canvas_scale) / (figure_width - 10 / 25.4)
+grDevices::dev.off()
+dom_spacing <- 2.8 + max(key_widths[seq_along(tree_domains) %% 2 == 1]) + 1.5
 n_dom       <- length(tree_domains)
 n_dom_rows  <- ceiling(n_dom / dom_cols)
-dom_x_start <- 43    # right of the block key
+dom_x_start <- key_right - dom_spacing - 2.8 -
+  max(key_widths[seq_along(tree_domains) %% 2 == 0]) - 1
+stopifnot(dom_x_start > blk_x_start + 20 + 12)
 
 p <- p +
   annotate("text", x=blk_x_start, y=legend_y_base - 1.5,

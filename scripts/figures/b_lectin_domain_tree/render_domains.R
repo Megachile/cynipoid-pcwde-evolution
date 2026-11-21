@@ -118,7 +118,7 @@ p$data$support_label <- ifelse(!p$data$isTip & is.finite(numeric_support) &
 p <- p + geom_text2(aes(subset=!isTip & support_label != "", label=support_label),
                     size=2.2, hjust=1.1, vjust=-0.35, color="grey25")
 
-# Manual keys keep the Figure 8 two-key presentation and add the focal-copy cue.
+# Match the headed chromosome/domain key format of Figure 5.
 n_tips <- nrow(ann)
 legend_y <- n_tips + 3
 used_raw <- intersect(names(block_display), unique(block_map))
@@ -127,30 +127,91 @@ for (b in used_raw) {
   label <- block_display[b]
   if (!(label %in% seen)) { used <- c(used, b); seen <- c(seen, label) }
 }
-for (i in seq_along(used)) {
-  b <- used[i]; col_i <- (i-1) %% 2; row_i <- (i-1) %/% 2
-  x <- 1 + col_i * 17; y <- legend_y + row_i * 2.2
-  p <- p + annotate("rect", xmin=x, xmax=x+1.8, ymin=y-0.7, ymax=y+0.7,
-                    fill=block_colors[b], color="grey30", linewidth=0.2) +
-    annotate("text", x=x+2.5, y=y, label=block_display[b], hjust=0,
-             size=3.1, color=block_colors[b], fontface="bold")
-}
-domain_key <- data.frame(
-  label=c("tree-tip B-lectin domain", "other B-lectin domain", "GH30", "GH59", "PI-PLC-X"),
-  color=c(domain_colors["B"], domain_colors["B_other"], domain_colors["GH30"],
-          domain_colors["GH59"], domain_colors["PI-PLC-X"]), stringsAsFactors=FALSE)
-for (i in seq_len(nrow(domain_key))) {
-  col_i <- (i-1) %% 2; row_i <- (i-1) %/% 2
-  x <- 38 + col_i * 27; y <- legend_y + row_i * 2.2
-  p <- p + annotate("rect", xmin=x, xmax=x+1.8, ymin=y-0.7, ymax=y+0.7,
-                    fill=domain_key$color[i], color="grey30", linewidth=0.25) +
-    annotate("text", x=x+2.5, y=y, label=domain_key$label[i], hjust=0, size=3.1)
-}
-
+# Derive key membership from the exact marks expanded and drawn above.
+drawn_class <- ifelse(dom$class == "B" & !dom$focal, "B_other", dom$class)
+domain_labels <- c(B="tree-tip B-lectin domain", B_other="other B-lectin domain",
+                   GH30="GH30", GH59="GH59", `PI-PLC-X`="PI-PLC-X")
+used_domains <- intersect(names(domain_labels), unique(drawn_class))
+stopifnot(setequal(used_domains, unique(drawn_class)))
+domain_key <- data.frame(label=unname(domain_labels[used_domains]),
+                         color=unname(domain_colors[used_domains]))
+# Measure both groups at the saved type size so columns follow their labels.
 right_edge <- max(vapply(seq_len(nrow(ann)), function(i) {
   anchor_x + (as.integer(ann$full_sequence_length_aa[i]) - focal_centers[ann$tip_id[i]]) / aa_per_unit
 }, numeric(1)))
-p <- p + xlim_tree(right_edge + 3) +
+key_size <- 3.5
+header_size <- 3.8
+swatch_width <- 2.6
+label_gap <- 0.65
+column_gap <- 1.3
+group_gap <- 3.0
+# Resolve the same panel and coordinate expansion used for the saved figure.
+measure_plot <- p + expand_limits(y=n_tips + 8.1) + xlim_tree(right_edge + 3) +
+  coord_cartesian(xlim=c(-1, right_edge + 3), clip="off") +
+  theme(legend.position="none", plot.margin=margin(5, 5, 5, 5))
+grDevices::pdf(NULL, width=14, height=15.5)
+grid::grid.newpage()
+grid::grid.draw(ggplot2::ggplotGrob(measure_plot))
+grid::grid.force()
+viewports <- grid::grid.ls(viewports=TRUE, grobs=FALSE, print=FALSE)$name
+panel_name <- viewports[grepl("^panel\\.", viewports)][1]
+stopifnot(!is.na(panel_name))
+grid::seekViewport(panel_name)
+panel_inches <- grid::convertWidth(grid::unit(1, "npc"), "inches", valueOnly=TRUE)
+panel_range <- ggplot2::ggplot_build(measure_plot)$layout$panel_params[[1]]$x.range
+units_per_inch <- diff(panel_range) / panel_inches
+measure_key <- function(labels, bold=FALSE, size=key_size) {
+  vapply(labels, function(label) grid::convertWidth(
+    grid::grobWidth(grid::textGrob(label, gp=grid::gpar(
+      fontsize=size * ggplot2::.pt, fontface=if (bold) "bold" else "plain"))),
+    "inches", valueOnly=TRUE), numeric(1)) *
+    units_per_inch
+}
+block_widths <- measure_key(unname(block_display[used]), TRUE)
+domain_widths <- measure_key(domain_key$label)
+headers <- measure_key(c("Reference chromosome", "Protein domains"), TRUE, header_size)
+grDevices::dev.off()
+column_step <- function(widths) swatch_width + label_gap +
+  max(widths[seq_along(widths) %% 2 == 1]) + column_gap
+group_width <- function(widths) column_step(widths) + swatch_width +
+  label_gap + max(widths[seq_along(widths) %% 2 == 0])
+block_start <- 1
+# Centre the protein-domain key under the drawn protein architectures
+# (domain_x_start to right_edge), never closer than group_gap to the
+# chromosome key.
+domain_block_width <- max(group_width(domain_widths), headers[2])
+domain_start <- max(
+  block_start + max(group_width(block_widths), headers[1]) + group_gap,
+  (domain_x_start + right_edge) / 2 - domain_block_width / 2)
+stopifnot(domain_start + max(group_width(domain_widths), headers[2]) < right_edge + 3)
+p <- p +
+  annotate("text", x=block_start, y=legend_y-1.7, label="Reference chromosome",
+           hjust=0, size=header_size, fontface="bold") +
+  annotate("text", x=domain_start, y=legend_y-1.7, label="Protein domains",
+           hjust=0, size=header_size, fontface="bold")
+for (i in seq_along(used)) {
+  b <- used[i]
+  x <- block_start + ((i-1) %% 2) * column_step(block_widths)
+  y <- legend_y + ((i-1) %/% 2) * 2.05
+  p <- p + annotate("rect", xmin=x, xmax=x+swatch_width,
+                    ymin=y-0.95, ymax=y+0.95,
+                    fill=block_colors[b], color="grey30", linewidth=0.2) +
+    annotate("text", x=x+swatch_width+label_gap, y=y, label=block_display[b],
+             hjust=0, size=key_size, color=block_colors[b], fontface="bold")
+}
+for (i in seq_len(nrow(domain_key))) {
+  x <- domain_start + ((i-1) %% 2) * column_step(domain_widths)
+  y <- legend_y + ((i-1) %/% 2) * 2.05
+  p <- p + annotate("rect", xmin=x, xmax=x+swatch_width,
+                    ymin=y-0.95, ymax=y+0.95,
+                    fill=domain_key$color[i], color="grey30", linewidth=0.2) +
+    annotate("text", x=x+swatch_width+label_gap, y=y, label=domain_key$label[i],
+             hjust=0, size=key_size)
+}
+
+# Preserve the original tree panel's vertical scale when an undrawn key
+# category is removed: the old third key row ended at n_tips + 8.1.
+p <- p + expand_limits(y=n_tips + 8.1) + xlim_tree(right_edge + 3) +
   coord_cartesian(xlim=c(-1, right_edge + 3), clip="off") +
   theme(legend.position="none", plot.margin=margin(5, 5, 5, 5))
 

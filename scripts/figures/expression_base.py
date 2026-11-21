@@ -629,6 +629,22 @@ def main():
             if sp_i == 0:
                 ax_label.set_ylabel('Total TPM', fontsize=font_ylabel)
 
+    # Align all five gene codes with the leftmost Total TPM label. Preserve
+    # each title's vertical position and font properties, including the break.
+    fig.canvas.draw()
+    renderer = fig.canvas.get_renderer()
+    left_axes = [axes[(row, 0)] for row in range(len(ALL_COLUMNS))]
+    label_axes = [cell[1] if isinstance(cell, tuple) else cell for cell in left_axes]
+    label_left = min(ax.yaxis.label.get_window_extent(renderer).x0 for ax in label_axes)
+    for cell in left_axes:
+        ax = cell[0] if isinstance(cell, tuple) else cell
+        title = ax._left_title
+        display_y = title.get_transform().transform(title.get_position())[1]
+        x, y = fig.transFigure.inverted().transform((label_left, display_y))
+        fig.text(x, y, title.get_text(), ha='left', va=title.get_va(),
+                 fontproperties=title.get_fontproperties(), color=title.get_color())
+        title.set_text('')
+
     fig.text(0.32, 0.995, 'D. cinerosa', ha='center', va='top', fontsize=11,
              fontweight='bold', fontstyle='italic')
     fig.text(0.75, 0.995, 'B. kinseyi', ha='center', va='top', fontsize=11,
